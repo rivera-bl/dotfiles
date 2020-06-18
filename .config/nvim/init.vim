@@ -14,6 +14,7 @@ set incsearch
 set linebreak
 set nocompatible
 set viminfo=""
+set scrolloff=20            "Adds 5 viewlines below/above cursor
 filetype plugin on
 
 call plug#begin('~/.local/share/nvim/site/plugged')

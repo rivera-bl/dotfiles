@@ -2,6 +2,7 @@
 
 let mapleader = ","
 syntax on
+
 set noerrorbells
 set nu relativenumber
 set smartcase
@@ -45,6 +46,8 @@ colorscheme ayu
 nmap <leader>p :w! \| !xdg-open %<CR><CR>
 "Reload .Xresources
 nmap <leader>r :w! \| !xrdb .Xresources %<CR><CR>
+"Add Datetime
+nmap <leader>d i<C-R>=strftime("%m-%d-%Y")<CR><Esc>
 
 "Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

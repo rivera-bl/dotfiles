@@ -1,3 +1,5 @@
+#Run 'alias' for the full list
+
 #FILES
 alias zsc="nvim ~/.config/zsh/.zshrc"
 alias zsa="nvim ~/.config/zsh/.zalias"
@@ -12,6 +14,7 @@ alias gcm="git commit -m"
 alias gst="git status"
 alias gss="git status -s"
 alias grh="git reset HEAD"
+alias gpo="git push -u origin master"
 
 #MANPAGES
 #Simple Prompt Escapes from zsh manpage

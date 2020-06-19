@@ -1,0 +1,12 @@
+#Variables for easy styling 
+export COLDIR='33'
+export COLERR='1'
+export ENDSYM='>'
+
+#Styling the prompt with GIT info
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+zstyle ':vcs_info:git:*' formats '%F{240}(%b)%f'
+zstyle ':vcs_info:*' enable git
+PROMPT='%B%F{$COLDIR}%1~%f${vcs_info_msg_0_} %(?.%F{$COLDIR}$ENDSYM.%F{$COLERR}$ENDSYM)%f%b '

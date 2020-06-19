@@ -1,19 +1,7 @@
 source "/home/rvv/.config/zsh/.zalias"
+source "/home/rvv/.config/zsh/.zprompt"
 
 export ZSH="/home/rvv/.config/zsh/.oh-my-zsh"
-
-#Variables for easy styling the PROMPT 
-export COLDIR='33'
-export COLERR='1'
-export ENDSYM='>'
-
-#Styling the prompt with GIT info
-autoload -Uz vcs_info
-precmd() { vcs_info }
-setopt prompt_subst
-zstyle ':vcs_info:git:*' formats '%F{240}(%b)%f'
-zstyle ':vcs_info:*' enable git
-PROMPT='%B%F{$COLDIR}%1~%f${vcs_info_msg_0_} %(?.%F{$COLDIR}$ENDSYM.%F{$COLERR}$ENDSYM)%f%b '
 
 #For limiting and storing .zsh_history on a specific dir
 HISTSIZE=10000
@@ -33,7 +21,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
     vi-mode
     zsh-syntax-highlighting
     zsh-autosuggestions)

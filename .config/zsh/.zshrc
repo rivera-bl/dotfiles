@@ -1,3 +1,5 @@
+source "/home/rvv/.config/zsh/.zalias"
+
 export ZSH="/home/rvv/.config/zsh/.oh-my-zsh"
 
 #Variables for easy styling the PROMPT 
@@ -37,17 +39,6 @@ plugins=(
     zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
-alias czs="nvim ~/.config/zsh/.zshrc"
-alias ci3="nvim ~/.config/i3/config"
-alias cnv="nvim ~/.config/nvim/init.vim"
-alias ivw="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
-#Shows the aliases for git
-alias glias="alias | grep -i git | less"
-#Simple Prompt Escapes from zsh manpage
-alias zpes="man zshmisc | sed -n '2030,$'p | less"
-#VCS Info Module information from zsh manpage
-alias zvcs="man zshcontrib | sed -n '800,$'p | less"
 
 #From: https://unix.stackexchange.com/questions/25765/pasting-from-clipboard-to-vi-enabled-zsh-or-bash-shell
 function x11-clip-wrap-widgets() {

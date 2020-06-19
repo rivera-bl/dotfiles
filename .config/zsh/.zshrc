@@ -37,15 +37,13 @@ alias czs="nvim ~/.config/zsh/.zshrc"
 alias ci3="nvim ~/.config/i3/config"
 alias cnv="nvim ~/.config/nvim/init.vim"
 alias ivw="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
-alias gia="git add"
-alias gic="git commit"
-alias gis="git status"
+alias glias="alias | grep -i git | less"
 
 #Use carefuly cause it may slows. Requires ztpy module
 ZSH_AUTOSUGGEST_STRATEGY=(history completion) 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 #Removing git from completion cause it slows too much. Use '|' between patterns
-ZSH_AUTOSUGGEST_COMPLETION_IGNORE="gi* *"
+ZSH_AUTOSUGGEST_COMPLETION_IGNORE="g* *"
 
 #For Autosuggestions plugin, has to be at the end
 bindkey '<' autosuggest-execute

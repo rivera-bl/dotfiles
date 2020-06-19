@@ -2,7 +2,7 @@
 export ZSH="/home/rvv/.config/zsh/.oh-my-zsh"
 
 #For using 'completion' autosuggest strategy
-#zmodload zsh/zpty 
+zmodload zsh/zpty 
 
 #For limiting and storing .zsh_history on a specific dir
 HISTSIZE=10000
@@ -38,8 +38,11 @@ alias ci3="nvim ~/.config/i3/config"
 alias cnv="nvim ~/.config/nvim/init.vim"
 alias ivw="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
 
-#Would be nice but slows too much. Requires ztpy module
-#ZSH_AUTOSUGGEST_STRATEGY=(history completion) 
+#Use carefuly cause it may slows. Requires ztpy module
+ZSH_AUTOSUGGEST_STRATEGY=(history completion) 
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+#Removing git from completion cause it slows too much
+ZSH_AUTOSUGGEST_COMPLETION_IGNORE="git *"
 
 #For Autosuggestions plugin, has to be at the end
 bindkey '<' autosuggest-execute

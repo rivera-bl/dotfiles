@@ -2,21 +2,28 @@
 #Run 'alias' for the full list
 
 #FILES
-alias zsc="nvim ~/.config/zsh/.zshrc"
-alias zsa="nvim ~/.config/zsh/.zalias"
-alias i3c="nvim ~/.config/i3/config"
-alias nvc="nvim ~/.config/nvim/init.vim"
+alias zsc="$EDITOR ~/.config/zsh/.zshrc"
+alias zsa="$EDITOR ~/.config/zsh/.zalias"
+alias i3c="$EDITOR ~/.config/i3/config"
+alias nvc="$EDITOR ~/.config/nvim/init.vim"
 alias stc="$EDITOR ~/.config/st/config.h"
-alias vwi="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
+alias vwi="$EDITOR ~/.local/share/nvim/site/plugged/vimwiki/README.md"
 
 #COMMANDS
+#MAIN
+alias mki="sudo make clean install"
+
 #GIT
 alias gaa="git add ."
 alias gcm="git commit -m"
 alias gst="git status"
 alias gss="git status -s"
-alias grh="git reset HEAD"
-alias gpo="git push -u origin master"
+alias grs="git reset HEAD"
+alias grc="git reset HEAD^"
+alias gpp="git push -u origin master"
+alias gpr="git push -f"
+alias glc="git log --pretty=format:\"%h > %s\""
+
 
 #MANPAGES
 #Simple Prompt Escapes from zsh manpage

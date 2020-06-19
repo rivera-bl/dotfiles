@@ -37,3 +37,4 @@ alias ci3="nvim ~/.config/i3/config"
 alias cnv="nvim ~/.config/nvim/init.vim"
 alias ivw="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
 
+bindkey '<' autosuggest-execute

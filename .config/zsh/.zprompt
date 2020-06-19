@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 #Variables for easy styling 
 export COLDIR='33'
 export COLERR='1'

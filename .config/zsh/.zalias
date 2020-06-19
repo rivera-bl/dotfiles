@@ -1,3 +1,4 @@
+#!/bin/zsh
 #Run 'alias' for the full list
 
 #FILES
@@ -5,6 +6,7 @@ alias zsc="nvim ~/.config/zsh/.zshrc"
 alias zsa="nvim ~/.config/zsh/.zalias"
 alias i3c="nvim ~/.config/i3/config"
 alias nvc="nvim ~/.config/nvim/init.vim"
+alias stc="$EDITOR ~/.config/st/config.h"
 alias vwi="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
 
 #COMMANDS

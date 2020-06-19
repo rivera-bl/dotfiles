@@ -25,7 +25,9 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    zsh-syntax-highlighting)
+    zsh-syntax-highlighting
+    zsh-autosuggestions)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,3 +36,4 @@ alias czs="nvim ~/.config/zsh/.zshrc"
 alias ci3="nvim ~/.config/i3/config"
 alias cnv="nvim ~/.config/nvim/init.vim"
 alias ivw="nvim ~/.local/share/nvim/site/plugged/vimwiki/README.md"
+

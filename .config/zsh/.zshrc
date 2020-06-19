@@ -44,7 +44,7 @@ alias gis="git status"
 #Use carefuly cause it may slows. Requires ztpy module
 ZSH_AUTOSUGGEST_STRATEGY=(history completion) 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-#Removing git from completion cause it slows too much
+#Removing git from completion cause it slows too much. Use '|' between patterns
 ZSH_AUTOSUGGEST_COMPLETION_IGNORE="gi* *"
 
 #For Autosuggestions plugin, has to be at the end

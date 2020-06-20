@@ -2,11 +2,11 @@
 #Run 'alias' for the full list
 
 #FILES
-alias zsc="$EDITOR ~/.config/zsh/.zshrc"
-alias zsa="$EDITOR ~/.config/zsh/.zalias"
-alias i3c="$EDITOR ~/.config/i3/config"
-alias nvc="$EDITOR ~/.config/nvim/init.vim"
-alias stc="$EDITOR ~/.config/st/config.h"
+alias zsc="$EDITOR ~/repos/dotfiles/.config/zsh/.zshrc"
+alias zsa="$EDITOR ~/repos/dotfiles/.config/zsh/.zalias"
+alias i3c="$EDITOR ~/repos/dotfiles/.config/i3/config"
+alias nvc="$EDITOR ~/repos/dotfiles/.config/nvim/init.vim"
+alias stc="$EDITOR ~/repos/dotfiles/.config/st/config.h"
 alias vwi="$EDITOR ~/.local/share/nvim/site/plugged/vimwiki/README.md"
 
 #COMMANDS

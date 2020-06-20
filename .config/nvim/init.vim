@@ -1,5 +1,3 @@
-
-
 let mapleader = ","
 syntax on
 
@@ -15,10 +13,12 @@ set linebreak
 set nocompatible
 set viminfo=""
 set clipboard=unnamedplus   "Allows paste to other vim/terms 
-set scrolloff=20            "Adds 5 viewlines below/above cursor
+set scrolloff=20            "Adds 20 viewlines below/above cursor
 filetype plugin on
 
 call plug#begin('~/.local/share/nvim/site/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'vimwiki/vimwiki'
@@ -38,6 +38,8 @@ au Filetype vimwiki set syntax=markdown
 
 let g:user_emmet_mode       = 'n' "Only available on normal mode
 let g:user_emmet_leader_key = ','
+
+let g:airline_powerline_fonts=1
 
 set termguicolors
 let ayucolor="dark"

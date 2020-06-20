@@ -23,9 +23,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Sets the wallpaper on startup using feh imageviewer
-exec --no-startup-id feh --bg-fill --no-fehbg ~/docs/wallpapers/forest/1592021217223.jpg
-
 # Start picom on startup
 exec --no-startup-id picom
 # Use amixer to adkust volume in ALSA.

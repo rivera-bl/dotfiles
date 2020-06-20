@@ -36,5 +36,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+~/.local/bin/.fehbg &
 unclutter -grab -idle 2 &
 exec i3

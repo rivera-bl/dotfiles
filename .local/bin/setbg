@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#FirstScript
+#Cycle through imgs in fullscreen & set your wallpaper with <enter>
+
+DIR=~/wallpapers
+SET_WALLP="feh --bg-fill %F | pkill -f feh"
+
+feh $DIR --sort filename --fullscreen --zoom fill --action $SET_WALLP
+
+#gotta wait for .fehbg to be made
+sleep 2 &
+wait
+
+#dont mess up your home
+mv ~/.fehbg ~/.local/bin/.fehbg
+
+#f toggle fullscreen
+#/(keypad) scale to screen size
+#q quit
+#n-p next-previous
+#d toogle img name/number

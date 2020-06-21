@@ -7,13 +7,17 @@ alias zsa="$EDITOR ~/repos/dotfiles/.config/zsh/.zalias"
 alias i3c="$EDITOR ~/repos/dotfiles/.config/i3/config"
 alias nvc="$EDITOR ~/repos/dotfiles/.config/nvim/init.vim"
 alias stc="$EDITOR ~/repos/dotfiles/.config/st/config.h"
+alias pic="$EDITOR ~/repos/dotfiles/.config/picom/picom.conf"
 alias vwi="$EDITOR ~/.local/share/nvim/site/plugged/vimwiki/README.md"
 
 #COMMANDS
 #MAIN
 alias mki="sudo make clean install"
+alias ki="sudo killall"
+alias n="nvim"
 
 #GIT
+alias ga="git add"
 alias gaa="git add ."
 alias gcm="git commit -m"
 alias gst="git status"
@@ -23,7 +27,7 @@ alias grc="git reset HEAD^"
 alias gpp="git push -u origin master"
 alias gpr="git push -f"
 alias glc="git log --pretty=format:\"%h > %s\""
-
+alias gdf="git diff"
 
 #MANPAGES
 #Simple Prompt Escapes from zsh manpage

@@ -52,6 +52,12 @@ nmap <leader>p :w! \| !xdg-open %<CR><CR>
 nmap <leader>r :w! \| !xrdb .Xresources %<CR><CR>
 "Add Datetime
 nmap <leader>d i<C-R>=strftime("%m-%d-%Y")<CR><Esc>
+"Save asap
+nmap <leader>s :w<CR>
+"Quit asap
+nmap <leader>q :q<CR>
+"Save & Quit asap
+nmap <leader>Q :wq<CR>
 
 "Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

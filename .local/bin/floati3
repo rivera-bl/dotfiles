@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Because you can only enable floating mode per
+# window class and you can only toggle floating
+# mode once the program has been executed, this 
+# is a simple workaround for floating an 
+# instance of your program without having to 
+# execute, toggle and resize manually
+
+i3 exec $@ &
+sleep 0.1
+i3-msg "floating toggle"

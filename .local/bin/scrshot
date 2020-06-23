@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Simple script for format saving screenshots with scrot
+# and previewing the capture with feh
+#
+# Requires 2 arguments
+# first can be -u for focused window 
+# or -s for selecting a region
+# second argument is the name identifier for the file
+#
+# TO:DO
+# - add and option for capturing the current screen
+# because by default it captures every screen together
+#
+
+folder=$IMAGES/cap
+datetime=$(date +%y%m%d.%H%M%S)
+name=$2
+ext=png
+filename=$datetime\_$name.$ext
+
+if   [[ $1 = "-u" ]]; then
+    scrot $folder/$filename -u -e 'feh -. $f'
+elif [[ $1 = "-s" ]]; then
+    scrot $folder/$filename -s -f -e 'feh -. $f'
+else
+    scrot $folder/$filename -e 'feh -. $f'
+fi

@@ -1,0 +1,18 @@
+#!/bin/zsh
+#
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#Test if your terminal supports 256 colors: $ echotc Co
+
+# ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=red,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=#00ff00
+
+#used to be green for commands
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=#63ace5
+#used to be bold for errors
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
+#used to be bold for directories
+ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=#369fd5
+#used to make text white and underlined when writing a path
+ZSH_HIGHLIGHT_STYLES[path]=fg=#369fd5
+ZSH_HIGHLIGHT_STYLES[default]=fg=#e7eff6

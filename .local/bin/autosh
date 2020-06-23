@@ -1,0 +1,16 @@
+#!/bin/bash
+
+FILENAME=$1
+DIR=$HOME/.local/bin
+
+touch $DIR/$FILENAME
+
+echo "#!/bin/sh
+
+" > $DIR/$FILENAME 
+
+chmod 754 $DIR/$FILENAME
+
+$EDITOR $DIR/$FILENAME
+
+

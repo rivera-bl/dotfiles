@@ -1,32 +1,23 @@
-source "/home/rvv/.config/zsh/.zalias"
-source "/home/rvv/.config/zsh/.zprompt"
+#Source aliases
+source "$HOME/.config/zsh/.zalias"
+#Source prompt style
+source "$HOME/.config/zsh/.zprompt"
 
-export ZSH="/home/rvv/.config/zsh/.oh-my-zsh"
+bindkey -v                      #Enable Vi-Mode
+setopt autocd                   #Enable Auto-cd	
+
+#Enable Auto-Completion
+autoload -U compinit
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 #For limiting and storing .zsh_history on a specific dir
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line if you want to disable marking untracked files
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    vi-mode
-    zsh-syntax-highlighting
-    zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
+#Function for Pasting Vi-Mode selection
 #From: https://unix.stackexchange.com/questions/25765/pasting-from-clipboard-to-vi-enabled-zsh-or-bash-shell
 function x11-clip-wrap-widgets() {
     # NB: Assume we are the first wrapper and that we only wrap native widgets
@@ -39,7 +30,7 @@ function x11-clip-wrap-widgets() {
             eval "
             function _x11-clip-wrapped-$widget() {
                 zle .$widget
-                xclip -in -selection clipboard <<<\$CUTBUFFER
+               xclip -in -selection clipboard <<<\$CUTBUFFER
             }
             "
         else
@@ -66,6 +57,5 @@ local paste_widgets=(
 # NB: can atm. only wrap native widgets
 x11-clip-wrap-widgets copy $copy_widgets
 x11-clip-wrap-widgets paste  $paste_widgets
-
-#For Autosuggestions plugin, has to be at the end
-bindkey ', ' autosuggest-accept
+ 
+source $HOME/.config/zsh/.zsyntax

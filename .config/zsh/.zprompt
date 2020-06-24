@@ -1,11 +1,18 @@
 #!/bin/zsh
+#
+# Variables for easy styling 
+# Since this runs the shell through .zprofile at startup
+# this variables become global
+# TO:DO 
+# make every color a variable for easy tweaking
+# that means prompt, xresources, and zsh syntax
+#
 
-#Variables for easy styling 
-export COLDIR='33'
-export COLERR='1'
-export ENDSYM='>'
+COLDIR='33'
+COLERR='1'
+ENDSYM='>'
 
-#Styling the prompt with GIT info
+# Styling the prompt with GIT info
 autoload -Uz vcs_info
 precmd() { vcs_info }
 setopt prompt_subst

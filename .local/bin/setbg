@@ -2,7 +2,7 @@
 
 #For some reason can't run it locally with the shebang to sh
 
-#FirstScript
+#First script
 #Cycle through imgs in fullscreen & set your wallpaper with <enter>
 
 DIR=$HOME/wallpapers

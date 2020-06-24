@@ -1,20 +1,31 @@
 #!/bin/zsh
 #Run 'alias' for the full list
 
+#DIRS
+alias cbi="cd $HOME/.local/bin"
+alias cnf="cd $HOME/repos/dotfiles/.config"
+alias cst="cd $HOME/.config/st"
+
 #FILES
 alias zsc="$EDITOR ~/repos/dotfiles/.config/zsh/.zshrc"
 alias zsa="$EDITOR ~/repos/dotfiles/.config/zsh/.zalias"
+alias zsp="$EDITOR ~/repos/dotfiles/.config/zsh/.zprompt"
+alias zss="$EDITOR ~/repos/dotfiles/.config/zsh/.zsyntax"
 alias i3c="$EDITOR ~/repos/dotfiles/.config/i3/config"
 alias nvc="$EDITOR ~/repos/dotfiles/.config/nvim/init.vim"
 alias stc="$EDITOR ~/repos/dotfiles/.config/st/config.h"
 alias pic="$EDITOR ~/repos/dotfiles/.config/picom/picom.conf"
-alias vwi="$EDITOR ~/.local/share/nvim/site/plugged/vimwiki/README.md"
+alias xri="$EDITOR ~/repos/dotfiles/.Xresources"
+alias xii="$EDITOR ~/repos/dotfiles/.xinitrc"
+alias zpi="$EDITOR ~/repos/dotfiles/.zprofile"
+alias xft="sudo $EDITOR /etc/X11/xorg.conf.d/fonts.conf"
 
 #COMMANDS
 #MAIN
 alias mki="sudo make clean install"
 alias ki="sudo killall"
-alias n="nvim"
+alias ls="ls --color"               #For gettin color output everytime we ls
+alias v="nvim"
 
 #GIT
 alias ga="git add"
@@ -34,3 +45,7 @@ alias gdf="git diff"
 alias zpes="man zshmisc | sed -n '2030,$'p | less"
 #VCS Info Module information from zsh manpage
 alias zvcs="man zshcontrib | sed -n '800,$'p | less"
+#Complist Module from zsh manpage
+alias zlst="man zshmodules | sed -n '251,$'p | less"
+#Completion System from zsh manpage
+alias zcom="man zshcompsys"

@@ -5,6 +5,7 @@ source "$HOME/.config/zsh/.zprompt"
 
 bindkey -v                      #Enable Vi-Mode
 setopt autocd                   #Enable Auto-cd	
+# setopt rcquotes
 
 #Enable Auto-Completion
 autoload -U compinit
@@ -16,6 +17,9 @@ _comp_options+=(globdots)		# Include hidden files.
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
+
+# This removes the '%' or '#' when printing a partial line
+PROMPT_EOL_MARK=''
 
 #Function for Pasting Vi-Mode selection
 #From: https://unix.stackexchange.com/questions/25765/pasting-from-clipboard-to-vi-enabled-zsh-or-bash-shell
@@ -59,3 +63,9 @@ x11-clip-wrap-widgets copy $copy_widgets
 x11-clip-wrap-widgets paste  $paste_widgets
  
 source $HOME/.config/zsh/.zsyntax
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/rvv/temp/google-cloud-sdk/path.zsh.inc' ]; then . '/home/rvv/temp/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/rvv/temp/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/rvv/temp/google-cloud-sdk/completion.zsh.inc'; fi

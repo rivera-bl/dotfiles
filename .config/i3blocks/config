@@ -1,0 +1,9 @@
+command=~/.local/bin/bar/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[datetime]
+interval=5
+
+[weather]
+interval=5

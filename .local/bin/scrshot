@@ -16,13 +16,13 @@
 folder=$IMAGES/cap
 datetime=$(date +%y%m%d.%H%M%S)
 name=$2
-ext=png
+ext=jpg
 filename=$datetime\_$name.$ext
 
 if   [[ $1 = "-u" ]]; then
     scrot $folder/$filename -u -e 'feh -. $f'
 elif [[ $1 = "-s" ]]; then
-    scrot $folder/$filename -s -f -e 'feh -. $f'
+    scrot $folder/$filename -s -e 'feh -. $f'
 else
     scrot $folder/$filename -e 'feh -. $f'
 fi

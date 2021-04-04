@@ -23,9 +23,9 @@ if [ -f "$userresources" ]; then
 
 fi
 
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
+# if [ -f "$usermodmap" ]; then
+#     xmodmap "$usermodmap"
+# fi
 
 # start some nice programs
 
@@ -36,8 +36,19 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# MPD daemon start (if no other user instance exists)
+[ ! -s ~/.config/mpd/pid ] && mpd
+
 # poweroff notebook screen
-xrandr --output LVDS-1 --off &
+xrandr --output LVDS1 --off &
 ~/.local/bin/.fehbg &
+# pulseaudio -D &
 unclutter -grab -idle 2 &
+xset r rate 250 30 &
+sleep 10s && xmodmap .Xmodmap &
 exec i3
+## Loop for restarting dwm
+# while true; do
+#     dwm >/dev/null 2>&1
+# done
+# exec dwm

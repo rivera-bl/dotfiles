@@ -7,6 +7,8 @@
 # instance of your program without having to 
 # execute, toggle and resize manually
 
-i3 exec $@ &
+i3 exec $@ 
 sleep 0.1
-i3-msg "floating toggle"
+i3-msg "floating toggle" 
+i3-msg "resize set 920 380"
+i3-msg "move position center"

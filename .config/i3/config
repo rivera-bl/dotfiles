@@ -14,20 +14,35 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 set $refresh_i3status killall -SIGUSR1 i3status
 
 #-----------------------------
+# STATUS BAR 
+#-----------------------------
+
+bar {
+    status_command i3blocks -c $XDG_CONFIG_HOME/i3blocks/config
+    position top
+}
+#-----------------------------
 # PROGRAMS 
 #-----------------------------
 
-floating_maximum_size 720 x 480
+for_window [title="ranger" class="St"] floating enable 
+for_window [class="SoulseekQt"] floating enable 
+for_window [title="ncmpcpp" class="St"] floating enable 
 
 # Start picom on startup
 exec --no-startup-id picom
 
-bindsym $mod+Return         exec $TERM
-bindsym $mod+Shift+Return   exec floati3 $TERM
+bindsym $mod+t              exec $TERM
+bindsym $mod+Shift+t        exec floati3 $TERM
 bindsym $mod+Shift+w        exec $BROWSER 
 bindsym $mod+d              exec dmenu_run
 bindsym $mod+v              exec $TERM -e $EDITOR -c "VimwikiIndex"
-bindsym $mod+Shift+s        exec scrshot -u window
+bindsym $mod+Print          exec scrshot -u window
+bindsym Print               exec scrshot screen
+bindsym $mod+a              exec $TERM -e ranger
+bindsym $mod+m              exec $TERM -e ncmpcpp
+bindsym $mod+x              exec $TERM -e calcurse
+bindsym $mod+Shift+m        exec soulseekqt
 
 #-----------------------------
 # GAPS
@@ -37,7 +52,7 @@ gaps inner 8
 gaps outer 5 
 
 # For hiding the window title bar
-new_window 1pixel
+new_window pixel 1
 
 #-----------------------------
 # ACTIONS 
@@ -69,7 +84,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split toggle
-bindsym $mod+t split toggle
+bindsym $mod+c split toggle
 
 # sticky toggle
 bindsym $mod+y sticky toggle
@@ -135,16 +150,18 @@ bindsym $mod+r mode "resize"
 # resize window 
 mode "resize" {
 
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
         
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
+        # back to normal: Escape or $mod+r
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
+# the second column is the color for the windows border
+client.focused          #002b36 #b3b3b3 #fdf6e3 #268bd2
 
 #------------------------
 # XF86 KEY BINDINGS
@@ -157,9 +174,7 @@ exec --no-startup-id xmodmap -e 'keycode 135 = Super_R' && xset -r 135
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
 bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+# Use mpc to toggle play/pause and switch songs
+bindsym XF86AudioPlay exec mpc toggle 
+bindsym XF86AudioNext exec mpc next 
+bindsym XF86AudioPrev exec mpc prev 

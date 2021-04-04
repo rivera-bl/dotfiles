@@ -1,0 +1,6 @@
+[Added Associations]
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-draw.desktop;
+image/png=feh.desktop;
+
+[Default Applications]
+x-scheme-handler/postman=Postman.desktop

@@ -1,0 +1,3 @@
+--add-metadata
+
+-o '$HOME/music/bandcamp/%(artist)s - %(album)s/%(track_number)s - %(track)s.%(ext)s'

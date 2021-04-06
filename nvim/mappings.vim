@@ -31,12 +31,15 @@ nnoremap <esc> :noh<return><esc>
 
 " Mappings for auto closing brackets in insert mode
 inoremap " ""<left>
-inoremap ' ''<left>
+inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+" Inserts a line break
+nnoremap <leader>g i<CR><Esc>O
 
 " Runs the command depending on its filetype
 autocmd FileType python     nnoremap <buffer> <leader>r :w! \| !python %<CR>

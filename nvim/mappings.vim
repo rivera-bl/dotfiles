@@ -4,6 +4,8 @@ let mapleader = ","
 "BINDINGS
 "Open file on browser
 " nmap <leader>b :w! \| !xdg-open %<CR><CR>
+" Sources init.vim
+nnoremap <leader>v :source ~/.config/nvim/init.vim <CR>
 "Open Bracey Live Server
 nmap <leader>b :Bracey <CR><CR>
 "Reload .Xresources

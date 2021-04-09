@@ -8,20 +8,27 @@ let mapleader = ","
 nnoremap <leader>v :source ~/.config/nvim/init.vim <CR>
 "Open Bracey Live Server
 nmap <leader>b :Bracey <CR><CR>
+" Open NERDTree. t open in new tab, s open in vsplit
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
+let NERDTreeMapOpenInTabSilent='l'
+let NERDTreeMapOpenVSplit='L'
+let NERDTreeMapActivateNode='<Space>'
+" Just to unmap this commands that are mapped to <C-j> and <C-k>
+let NERDTreeMapJumpNextSibling='<C-8>'
+let NERDTreeMapJumpPrevSibling='<C-9>'
+let g:NERDTreeWinSize=20
 "Reload .Xresources
-nmap <leader>a :w! \| !xrdb .Xresources %<CR><CR>
+nmap <C-x> :w! \| !xrdb .Xresources %<CR><CR>
 "Add Datetime
 nmap <leader>d i<C-R>=strftime("%m-%d-%Y")<CR><Esc>
 "Start FZF
 " CTRL-T, CTRL-X or CTRL-V open file in new tab, horizontal splits, or in vertical splits respectively
 nmap <leader>f :FZF /home/rvv/dev/ <CR>
 "Easy moving between splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>h
+nnoremap <C-k> <C-w>l
 " Tab Management
-nnoremap tn :tabnew<CR>
 nnoremap <S-k> :tabnext<CR>
 nnoremap <S-j> :tabprev<CR>
 " Write

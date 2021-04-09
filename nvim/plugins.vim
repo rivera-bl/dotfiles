@@ -1,7 +1,7 @@
 
 call plug#begin('~/.local/share/nvim/site/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 " fuzzy file finder
 Plug 'junegunn/fzf'
@@ -15,4 +15,5 @@ Plug 'plasticboy/vim-markdown'
 Plug 'ayu-theme/ayu-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'preservim/nerdtree'
 call plug#end()

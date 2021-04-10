@@ -42,6 +42,9 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 " Inserts a line break
 nnoremap <leader>g i<CR><Esc>O
+" to not enter insert mode before inserting multiple lines
+nnoremap o o<Esc>i
+nnoremap O O<Esc>i
 
 " Runs the command depending on its filetype
 autocmd FileType python     nnoremap <buffer> <leader>r :w! \| !python %<CR>

@@ -34,9 +34,9 @@ alias duh="du -h --max-depth=1 | sort -hr"
 
 #GIT
 
-alias gaa="git add ."
-alias gcm="git commit -m"
-alias gst="git status"
+alias ga="git add ."
+alias gc="git commit -m $1"
+alias gs="git status"
 alias gpp="git push -u origin master"
 alias glc="git log --reverse --pretty=reference"
 alias gdf="git diff"

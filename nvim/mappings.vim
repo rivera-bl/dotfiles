@@ -11,14 +11,6 @@ nmap <leader>b :Bracey <CR><CR>
 " Open NERDTree. t open in new tab, s open in vsplit
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
-let NERDTreeMapOpenInTab='l'
-let NERDTreeMapOpenVSplit='L'
-let NERDTreeMapActivateNode='<Space>'
-" Just to unmap this commands that are mapped to <C-j> and <C-k>
-let NERDTreeMapJumpNextSibling='<C-8>'
-let NERDTreeMapJumpPrevSibling='<C-9>'
-let g:NERDTreeWinSize=20
-let g:NERDTreeQuitOnOpen = 1
 "Reload .Xresources
 nmap <C-x> :w! \| !xrdb .Xresources %<CR><CR>
 "Add Datetime
@@ -27,11 +19,11 @@ nmap <leader>d i<C-R>=strftime("%m-%d-%Y")<CR><Esc>
 " CTRL-T, CTRL-X or CTRL-V open file in new tab, horizontal splits, or in vertical splits respectively
 nmap <leader>f :FZF /home/rvv/dev/ <CR>
 "Easy moving between splits
-nnoremap <C-j> <C-w>h
-nnoremap <C-k> <C-w>l
-" Tab Management
-nnoremap <S-k> :tabnext<CR>
-nnoremap <S-j> :tabprev<CR>
+nnoremap <s-j> <C-w>h
+nnoremap <s-k> <C-w>l
+" " Tab Management (no more tabs)
+" nnoremap <S-k> :tabnext<CR>
+" nnoremap <S-j> :tabprev<CR>
 " Write
 nmap <leader>s :w<CR>
 "Quit 

@@ -1,5 +1,6 @@
 
 syntax enable
+set shell=zsh
 set noerrorbells
 set nu relativenumber
 set smartcase
@@ -25,6 +26,16 @@ filetype plugin on
 
 let g:go_auto_sameids = 0
 let g:go_auto_info = 0
+
+" NerdTree
+let NERDTreeMapOpenInTab='l'
+let NERDTreeMapOpenVSplit='L'
+let NERDTreeMapActivateNode='<Space>'
+" Just to unmap this commands that are mapped to <C-j> and <C-k>
+let NERDTreeMapJumpNextSibling='<C-8>'
+let NERDTreeMapJumpPrevSibling='<C-9>'
+let g:NERDTreeWinSize=20
+let g:NERDTreeQuitOnOpen = 1
 
 "Disables automatic commenting on newline:
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

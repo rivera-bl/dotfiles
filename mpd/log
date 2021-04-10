@@ -1,2 +1,0 @@
-Jul 21 00:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
-Jul 21 00:56 : exception: Failed to open '/home/rvv/.config/mpd/state': No such file or directory

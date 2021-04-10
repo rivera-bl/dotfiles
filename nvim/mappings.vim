@@ -1,4 +1,3 @@
-
 let mapleader = ","
 
 "BINDINGS
@@ -43,6 +42,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 " Inserts a line break
 nnoremap <leader>g i<CR><Esc>O
 " to not enter insert mode before inserting multiple lines
+" doesnt retain indentation tho
 nnoremap o o<Esc>i
 nnoremap O O<Esc>i
 " for replacing every word of the last search

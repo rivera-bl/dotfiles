@@ -6,6 +6,8 @@ set nu relativenumber
 set smartcase
 set smartindent
 set shiftwidth=4
+set list
+set listchars=tab:\|\  
 set tabstop=4 softtabstop=4
 set expandtab
 set incsearch
@@ -18,12 +20,11 @@ set termguicolors
 set splitright              "Opens vertical split on the right
 set splitbelow              "Opens horizontal split below
 set gdefault                "By default match every ocurrence in a line
-set foldmethod=indent       "Fold on indent, open/close za, jump zj/k
-set foldnestmax=2
-set foldlevelstart=1
-set foldclose=all
+" set foldmethod=indent       "Fold on indent, open/close za, jump zj/k
+" set foldnestmax=2
+" set foldlevelstart=1
+" set foldclose=all
 " set foldopen=all
-set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 filetype plugin on
 
 " let g:coc_global_extensions = [

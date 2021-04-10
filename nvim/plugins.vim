@@ -16,4 +16,5 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'preservim/nerdtree'
+Plug 'Yggdroot/indentLine'
 call plug#end()

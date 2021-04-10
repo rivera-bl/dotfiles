@@ -1,6 +1,6 @@
-
 syntax enable
 set shell=zsh
+set colorcolumn=80
 set noerrorbells
 set nu relativenumber
 set smartcase
@@ -34,6 +34,7 @@ let NERDTreeMapActivateNode='<Space>'
 " Just to unmap this commands that are mapped to <C-j> and <C-k>
 let NERDTreeMapJumpNextSibling='<C-8>'
 let NERDTreeMapJumpPrevSibling='<C-9>'
+
 let g:NERDTreeWinSize=20
 let g:NERDTreeQuitOnOpen = 1
 
@@ -42,3 +43,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Calcurse notes with markdown
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
+" automatically wraps text at column 92 for markdown files
+au FileType markdown
+    \ setlocal textwidth=0 wrapmargin=0 wrap columns=92 colorcolumn=95

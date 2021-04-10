@@ -5,6 +5,7 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plug-conf/emmet.vim
 source $HOME/.config/nvim/plug-conf/vimwiki.vim
 source $HOME/.config/nvim/plug-conf/bracey.vim
+source $HOME/.config/nvim/plug-conf/nerdtree.vim
 
 let ayucolor="dark"
 colorscheme ayu 

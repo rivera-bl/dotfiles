@@ -9,7 +9,7 @@ set shiftwidth=4
 set tabstop=4 softtabstop=4
 set expandtab
 set incsearch
-set linebreak
+" set linebreak
 set nocompatible
 set viminfo=""
 set clipboard=unnamedplus   "Allows paste to other vim/terms 
@@ -27,19 +27,8 @@ filetype plugin on
 let g:go_auto_sameids = 0
 let g:go_auto_info = 0
 
-" NerdTree
-let NERDTreeMapOpenInTab='l'
-let NERDTreeMapOpenVSplit='L'
-let NERDTreeMapActivateNode='<Space>'
-" Just to unmap this commands that are mapped to <C-j> and <C-k>
-let NERDTreeMapJumpNextSibling='<C-8>'
-let NERDTreeMapJumpPrevSibling='<C-9>'
-
-let g:NERDTreeWinSize=20
-let g:NERDTreeQuitOnOpen = 1
-
 "Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Calcurse notes with markdown
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown

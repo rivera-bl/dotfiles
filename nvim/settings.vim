@@ -5,6 +5,7 @@ set noerrorbells
 set nu relativenumber
 set smartcase
 set smartindent
+set breakindent
 set shiftwidth=4
 set list
 set listchars=tab:\|\  
@@ -41,12 +42,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
 " automatically wraps text at column 92 for markdown files
-au FileType markdown
-    \ setlocal textwidth=0 wrapmargin=0 wrap columns=92 colorcolumn=95
+" au FileType markdown, when windows too small it fucks up the vim-airline tho 
+"     \ setlocal textwidth=0 wrapmargin=0 wrap columns=92 colorcolumn=95
 
 " Save manual folds on file close
-augroup remember_folds
-  autocmd!
-  au BufWinLeave ?* mkview 1
-  au BufWinEnter ?* silent! loadview 1
-augroup END
+" augroup remember_folds
+"   autocmd!
+"   au BufWinLeave ?* mkview 1
+"   au BufWinEnter ?* silent! loadview 1
+" augroup END

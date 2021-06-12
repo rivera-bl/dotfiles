@@ -20,9 +20,9 @@ nmap <leader>f :FZF /home/rvv/dev/ <CR>
 "Easy moving between splits
 nnoremap <s-j> <C-w>h
 nnoremap <s-k> <C-w>l
-" " Tab Management (no more tabs)
-" nnoremap <S-k> :tabnext<CR>
-" nnoremap <S-j> :tabprev<CR>
+" Tab Management 
+nnoremap <S-k> :tabnext<CR>
+nnoremap <S-j> :tabprev<CR>
 " Write
 nmap <leader>s :w<CR>
 "Quit 
@@ -32,7 +32,6 @@ nnoremap <esc> :noh<return><esc>
 
 " Mappings for auto closing brackets in insert mode
 inoremap " ""<left>
-inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
@@ -40,7 +39,7 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 " Inserts a line break
-nnoremap <leader>g i<CR><Esc>O
+nnoremap <leader>g a<CR><Esc>O
 " to not enter insert mode before inserting multiple lines
 " doesnt retain indentation tho
 nnoremap o o<Esc>i

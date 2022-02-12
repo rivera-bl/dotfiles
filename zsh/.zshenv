@@ -69,3 +69,5 @@ if [ -f '/home/rvv/temp/google-cloud-sdk/path.zsh.inc' ]; then . '/home/rvv/temp
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rvv/temp/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/rvv/temp/google-cloud-sdk/completion.zsh.inc'; fi
+
+if [ -e /home/rvv/.nix-profile/etc/profile.d/nix.sh ]; then source /home/rvv/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

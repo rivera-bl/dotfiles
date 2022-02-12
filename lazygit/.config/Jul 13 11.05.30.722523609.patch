@@ -1,0 +1,10 @@
+--- a/tmux/tmux.conf
++++ b/tmux/tmux.conf
+@@ -25,6 +25,7 @@ bind | split-window -h
+ unbind '"'
+ bind - split-window -v
+ 
++# Hides status bar on fullscreen
+ #############################
+ ## PLUGINS
+ #############################

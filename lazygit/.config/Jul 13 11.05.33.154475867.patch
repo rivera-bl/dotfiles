@@ -1,0 +1,10 @@
+--- a/tmux/tmux.conf
++++ b/tmux/tmux.conf
+@@ -27,6 +27,7 @@ bind - split-window -v
+ 
+ # Hides status bar on fullscreen
+ bind-key z resize-pane -Z \; if-shell "tmux list-panes -F '#F' | grep -q Z" "set -g status off" "set -g status on"
++
+ #############################
+ ## PLUGINS
+ #############################

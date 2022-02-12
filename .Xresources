@@ -2,7 +2,8 @@
 *.alpha: 0.8
 
 !! Set a default font and font size as below:
-*.font: SourceCodePro-12:light
+/* *.font: SourceCodePro-12:light */
+*.font: SourceCodePro-10:strong
 
 /* name		dark	light */
 /* black	0	8 */
@@ -155,8 +156,8 @@
 /* *.color256: 0#1d2021 */
 /* *.color257: 15#ebdbb2 */
 
-! ayu-vim palette
-*.color0: #0F1419
+! ayu-vim palette (not anymore, color0 is moonlight.vim bg)
+*.color0: #1d2225
 *.color1: #cc241d 
 *.color2: #98971a 
 *.color3: #d79921 
@@ -188,7 +189,7 @@ xterm*faceSize: 16
 
 xterm*foreground: rgb:a8/a8/a8
 xterm*background: rgb:00/00/00
-xterm*color0: rgb:00/00/00
+xterm*color0: rgb:29/00/00
 xterm*color1: rgb:a8/00/00
 xterm*color2: rgb:00/a8/00
 xterm*color3: rgb:a8/54/00

@@ -26,17 +26,18 @@ bar {
 #-----------------------------
 
 for_window [title="ranger" class="St"] floating enable 
-for_window [class="SoulseekQt"] floating enable 
-for_window [title="ncmpcpp" class="St"] floating enable 
+# for_window [class="SoulseekQt"] floating enable 
 
 # Start picom on startup
 exec --no-startup-id picom
 
 bindsym $mod+t              exec $TERM
+bindsym $mod+v              exec $TERM -e $EDITOR
 bindsym $mod+Shift+t        exec floati3 $TERM
 bindsym $mod+Shift+w        exec $BROWSER 
+bindsym $mod+z              exec zeal
 bindsym $mod+d              exec dmenu_run
-bindsym $mod+v              exec $TERM -e $EDITOR -c "VimwikiIndex"
+bindsym $mod+w              exec $TERM -e $EDITOR -c "VimwikiIndex"
 bindsym $mod+Print          exec scrshot -u window
 bindsym Print               exec scrshot screen
 bindsym $mod+a              exec $TERM -e ranger
@@ -150,10 +151,10 @@ bindsym $mod+r mode "resize"
 # resize window 
 mode "resize" {
 
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
         
         # back to normal: Escape or $mod+r
         bindsym Escape mode "default"

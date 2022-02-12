@@ -4,3 +4,17 @@ image/png=feh.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+x-scheme-handler/msteams=teams.desktop
+
+[Desktop Entry]
+Type=Application
+Name=firefox
+Comment=browser
+Terminal=false
+Exec=firefox
+Categories=Network;WebBrowser

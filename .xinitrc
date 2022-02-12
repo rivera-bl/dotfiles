@@ -42,10 +42,9 @@ fi
 # poweroff notebook screen
 xrandr --output LVDS1 --off &
 ~/.local/bin/.fehbg &
-# pulseaudio -D &
+pulseaudio -D &
 unclutter -grab -idle 2 &
-xset r rate 250 30 &
-sleep 10s && xmodmap .Xmodmap &
+sleep 10s && skey &
 exec i3
 ## Loop for restarting dwm
 # while true; do

@@ -1,0 +1,20 @@
+--- a/tmux/tmux.conf
++++ b/tmux/tmux.conf
+@@ -7,16 +7,17 @@ bind C-a send-prefix
+ ## OPTIONS
+ #############################
+ 
+ 
+ set -g mouse on                                 # supports scrolling and pane resizing with the mouse
+ set -ga terminal-overrides ",*256col*:Tc"       # 256-colors
+ set -sg escape-time 0                           # Remove delay when switching between Vim modes.
+ set -g base-index 1                             # Start windows at index 1
+ setw -g pane-base-index 1                       # Start panes at index 1
+ 
+ # Start window and pane indices at 2.
+ set -g base-index 1
+ set -g pane-base-index 0
++
+ #############################
+ ## BINDS
+ #############################

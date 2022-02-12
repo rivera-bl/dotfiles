@@ -26,23 +26,49 @@ alias xft="sudo $EDITOR /etc/X11/xorg.conf.d/fonts.conf"
 alias mki="sudo make clean install"
 alias ki="sudo killall"
 alias ls="ls --color"               #For gettin color output everytime we ls
-alias ll="ls -l --color"
+alias ll="ls -al --color"
 alias grep="grep --color"
 alias vi="nvim"
 alias py="python -c 'import code; import readline; readline.parse_and_bind(\"set editing-mode vi\"); code.interact(local=locals())'"
 alias duh="du -h --max-depth=1 | sort -hr"
 
 #GIT
-
-alias ga="git add ."
+alias ga="git add"
+alias gaa="git add ."
 alias gc="git commit -m $1"
 alias gs="git status"
 alias gpp="git push -u origin master"
 alias glc="git log --reverse --pretty=reference"
 alias gdf="git diff"
+alias glz="lazygit"
+alias glg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 # alias gpr="git push -f"
 # alias gss="git status -s"
 # alias ga="git add"
+
+#DOCKER
+alias dk="docker"
+alias dke="docker exec -it"
+alias dkc="docker-compose"
+
+#TERRAFORM
+alias tf="terraform"
+alias tfaa="terraform apply --auto-approve"
+
+# PACKER
+alias pk="packer"
+alias pkb="packer build"
+
+# VAGRANT
+alias vg="vagrant"
+alias vgu="vagrant up && vagrant ssh"
+alias vgd="vagrant destroy"
+
+# TMUX
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
 
 #MANPAGES
 #Simple Prompt Escapes from zsh manpage

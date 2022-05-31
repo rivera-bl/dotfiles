@@ -1,6 +1,4 @@
-# i3 config file (v4)
-# 
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# https://i3wm.org/docs/userguide.html
 
 set $mod Mod4
 
@@ -18,14 +16,27 @@ set $refresh_i3status killall -SIGUSR1 i3status
 #-----------------------------
 
 bar {
-    status_command i3blocks -c $XDG_CONFIG_HOME/i3blocks/config
-    position top
+  position top
+  status_command i3blocks -c $XDG_CONFIG_HOME/i3blocks/config
+  # gotta define a font to get emojis on i3blocks
+  font pango: Source Code Pro Light 9
+  # bar transparency
+  i3bar_command i3bar -t
+
+  colors {
+    # <colorclass> <border> <background> <text>
+    background #1D222500
+    statusline #000000 #000000 #000000
+    focused_workspace #F2F3F2 #F2F3F2 #000000
+    inactive_workspace #000000 #000000 #FFFFFF
+    # separator #00000000
+  }   
 }
 #-----------------------------
 # PROGRAMS 
 #-----------------------------
 
-for_window [title="ranger" class="St"] floating enable 
+# for_window [title="ranger" class="St"] floating enable 
 # for_window [class="SoulseekQt"] floating enable 
 
 # Start picom on startup
@@ -49,8 +60,9 @@ bindsym $mod+Shift+m        exec soulseekqt
 # GAPS
 #-----------------------------
 
-gaps inner 8
-gaps outer 5 
+gaps inner 15
+gaps outer 15
+smart_borders on
 
 # For hiding the window title bar
 new_window pixel 1
@@ -161,8 +173,8 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# the second column is the color for the windows border
-client.focused          #002b36 #b3b3b3 #fdf6e3 #268bd2
+# the second column is the color for the windows border, hacker green: #7cfcda, yellow: #fdad00 
+client.focused          #002b36 #C4C8D1 #fdf6e3 #268bd2
 
 #------------------------
 # XF86 KEY BINDINGS

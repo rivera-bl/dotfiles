@@ -38,13 +38,15 @@ bar {
 
 # for_window [title="ranger" class="St"] floating enable 
 # for_window [class="SoulseekQt"] floating enable 
+for_window [title="ncmpcpp" class="St"] floating enable, border none, resize set 1100 700, move position center
+for_window [title="ranger" class="St"] floating enable, border none, resize set 1100 700, move position center
 
 # Start picom on startup
 exec --no-startup-id picom
 
 bindsym $mod+t              exec $TERM
 bindsym $mod+v              exec $TERM -e $EDITOR
-bindsym $mod+Shift+t        exec floati3 $TERM
+bindsym $mod+Shift+t        exec floati3 $TERM "resize set 920 380"
 bindsym $mod+Shift+w        exec $BROWSER 
 bindsym $mod+z              exec zeal
 bindsym $mod+d              exec dmenu_run
@@ -60,11 +62,14 @@ bindsym $mod+Shift+m        exec soulseekqt
 # GAPS
 #-----------------------------
 
-gaps inner 15
-gaps outer 15
+gaps inner 20
+gaps outer 10
+
+workspace $ws4 gaps outer 0
+workspace $ws4 gaps inner 5
+
 smart_borders on
 
-# For hiding the window title bar
 new_window pixel 1
 
 #-----------------------------
@@ -187,7 +192,12 @@ exec --no-startup-id xmodmap -e 'keycode 135 = Super_R' && xset -r 135
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
 bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+bindsym XF86AudioMicMute exec amixer sset Capture toggle
+
 # Use mpc to toggle play/pause and switch songs
-bindsym XF86AudioPlay exec mpc toggle 
-bindsym XF86AudioNext exec mpc next 
-bindsym XF86AudioPrev exec mpc prev 
+# bindsym XF86AudioPlay exec mpc toggle 
+# bindsym XF86AudioNext exec mpc next 
+# bindsym XF86AudioPrev exec mpc prev 
+bindsym $mod+F2 exec mpc toggle 
+bindsym $mod+F3  exec mpc prev 
+bindsym $mod+F4  exec mpc next 

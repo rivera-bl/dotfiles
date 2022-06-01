@@ -25,6 +25,7 @@ bar {
 
   colors {
     # <colorclass> <border> <background> <text>
+    # last 2 numbers represent opacity
     background #1D222500
     statusline #000000 #000000 #000000
     focused_workspace #F2F3F2 #F2F3F2 #000000
@@ -201,3 +202,6 @@ bindsym XF86AudioMicMute exec amixer sset Capture toggle
 bindsym $mod+F2 exec mpc toggle 
 bindsym $mod+F3  exec mpc prev 
 bindsym $mod+F4  exec mpc next 
+
+bindsym $mod+Home exec xbacklight -inc 10
+bindsym $mod+End  exec xbacklight -dec 10

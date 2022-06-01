@@ -56,7 +56,8 @@ bindsym $mod+Print          exec scrshot -u window
 bindsym Print               exec scrshot screen
 bindsym $mod+a              exec $TERM -e ranger
 bindsym $mod+m              exec $TERM -e ncmpcpp
-bindsym $mod+x              exec $TERM -e calcurse
+# bindsym $mod+x              exec $TERM -e calcurse
+bindsym $mod+x              exec $TERM -e tmux attach
 bindsym $mod+Shift+m        exec soulseekqt
 
 #-----------------------------

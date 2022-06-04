@@ -40,7 +40,8 @@ fi
 [ ! -s ~/.config/mpd/pid ] && mpd
 
 # poweroff notebook screen
-xrandr --output LVDS1 --off &
+# xrandr --output LVDS1 --off &
+xrandr --auto --output LVDS1 --mode 1600x900 --left-of VGA1 &
 ~/.local/bin/.fehbg &
 pulseaudio -D &
 unclutter -grab -idle 2 &

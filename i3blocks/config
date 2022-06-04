@@ -2,8 +2,11 @@ command=~/.local/bin/bar/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
-[datetime]
-interval=5
+[mpd_nowplaying]
+interval=1
 
 [weather]
-interval=5
+interval=18000
+
+[datetime]
+interval=60

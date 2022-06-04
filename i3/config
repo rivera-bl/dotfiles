@@ -201,9 +201,9 @@ bindsym XF86AudioMicMute exec amixer sset Capture toggle
 # bindsym XF86AudioPlay exec mpc toggle 
 # bindsym XF86AudioNext exec mpc next 
 # bindsym XF86AudioPrev exec mpc prev 
-bindsym $mod+F2 exec mpc toggle 
-bindsym $mod+F3  exec mpc prev 
-bindsym $mod+F4  exec mpc next 
+bindsym F3 exec mpc toggle 
+bindsym F2 exec mpc prev 
+bindsym F4 exec mpc next
 
 bindsym $mod+Home exec xbacklight -inc 10
 bindsym $mod+End  exec xbacklight -dec 10

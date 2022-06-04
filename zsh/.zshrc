@@ -64,6 +64,9 @@ x11-clip-wrap-widgets paste  $paste_widgets
  
 source $HOME/.config/zsh/.zsyntax
 
+function c() python3 -c "from math import *; print($*);"
+alias c='noglob c'
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/rvv/temp/google-cloud-sdk/path.zsh.inc' ]; then . '/home/rvv/temp/google-cloud-sdk/path.zsh.inc'; fi
 

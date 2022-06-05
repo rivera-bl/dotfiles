@@ -25,11 +25,12 @@ bar {
 
   colors {
     # <colorclass> <border> <background> <text>
-    # last 2 numbers represent opacity
-    background #1D222500
-    statusline #000000 #000000 #000000
+    # can add last 2 numbers to represent opacity
+    background #1D2225
+    # statusline #000000 #000000 #000000
+    statusline #FFFFFF #FFFFFF #FFFFFF
     focused_workspace #F2F3F2 #F2F3F2 #000000
-    inactive_workspace #000000 #000000 #FFFFFF
+    inactive_workspace #1D2225  #1D2225 #FFFFFF
     # separator #00000000
   }   
 }
@@ -65,14 +66,12 @@ bindsym Scroll_Lock         exec systemctl suspend && xss-lock --transfer-sleep-
 # GAPS
 #-----------------------------
 
-gaps inner 20
-gaps outer 10
-
-workspace $ws4 gaps outer 0
-workspace $ws4 gaps inner 5
+gaps inner 15
 
 smart_borders on
+smart_gaps on
 
+# removes window title
 new_window pixel 1
 
 #-----------------------------

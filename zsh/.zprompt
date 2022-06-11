@@ -3,19 +3,19 @@
 # Variables for easy styling 
 # Since this runs the shell through .zprofile at startup
 # this variables become global
-# TO:DO 
+# TODO:
 # make every color a variable for easy tweaking
 # that means prompt, xresources, and zsh syntax
 #
 
-COLDIR='33'
+COLDIR='61'
 COLERR='1'
-ENDSYM='>'
+ENDSYM='>>'
 
 # Styling the prompt with GIT info
 autoload -Uz vcs_info
 precmd() { vcs_info }
 setopt prompt_subst
-zstyle ':vcs_info:git:*' formats '%F{240}(%b)%f'
+zstyle ':vcs_info:git:*' formats '%F{46}[%b]%f'
 zstyle ':vcs_info:*' enable git
-PROMPT='%B%F{$COLDIR}%1~%f${vcs_info_msg_0_} %(?.%F{$COLDIR}$ENDSYM.%F{$COLERR}$ENDSYM)%f%b '
+PROMPT='%F{$COLDIR}@%m:%F{46} %1~${vcs_info_msg_0_} %(?.%F{COLDIR}$ENDSYM.%F{$COLERR}$ENDSYM)%f%b '

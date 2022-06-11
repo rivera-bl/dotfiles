@@ -8,14 +8,14 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=#00ff00
 
 #used to be green for commands
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=#f27331
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=#EEEEEE
 #used to be bold for errors
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=#ff0000
 #used to be bold for directories
-ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=#369fd5
+ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=#3e7eff6
 #used to make text white and underlined when writing a path
-ZSH_HIGHLIGHT_STYLES[path]=fg=#369fd5
+ZSH_HIGHLIGHT_STYLES[path]=fg=#999999
 #Everything else
-ZSH_HIGHLIGHT_STYLES[default]=fg=#e7eff6
+ZSH_HIGHLIGHT_STYLES[default]=fg=#666666
 #Double quoted arguments
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=#afc350

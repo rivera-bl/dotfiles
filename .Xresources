@@ -3,7 +3,7 @@
 
 !! Set a default font and font size as below:
 /* *.font: SourceCodePro-12:light */
-*.font: SourceCodePro-10:strong
+*.font: SourceCodePro-9.6:strong
 
 /* name		dark	light */
 /* black	0	8 */

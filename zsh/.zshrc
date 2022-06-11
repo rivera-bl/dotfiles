@@ -14,9 +14,12 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 #For limiting and storing .zsh_history on a specific dir
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.config/zsh/history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt appendhistory
+setopt INC_APPEND_HISTORY  
+setopt SHARE_HISTORY
 
 # This removes the '%' or '#' when printing a partial line
 PROMPT_EOL_MARK=''

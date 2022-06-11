@@ -272,7 +272,16 @@ song_status_format = {{%a - }{%t}}|{%f}
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-#execute_on_song_change = ""
+
+# GET COVER ART WITH ncmpcpp-ueberzug
+execute_on_song_change="~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
+# needed so the image gets resized when the size of the window changes
+execute_on_player_state_change = "~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
+visualizer_look = "  "
+startup_screen = visualizer 
+startup_slave_screen = playlist
+startup_slave_screen_focus = yes
+locked_screen_width_part = 35  
 #
 ##
 ## Note: Custom command that will be executed each time player state
@@ -280,7 +289,6 @@ song_status_format = {{%a - }{%t}}|{%f}
 ## state (either unknown, play, pause, or stop) for its duration.
 ##
 #
-#execute_on_player_state_change = ""
 #
 #playlist_show_mpd_host = no
 #
@@ -395,7 +403,9 @@ data_fetching_delay = no
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-startup_screen = media_library
+
+##startup_screen = media_library
+
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list

@@ -40,7 +40,7 @@ bar {
 
 # for_window [title="ranger" class="St"] floating enable 
 # for_window [class="SoulseekQt"] floating enable 
-for_window [title="ncmpcpp" class="St"] floating enable, border none, resize set 1100 700, move position center
+for_window [title="ncmpcpp" class="St"] floating enable, border none, resize set 1300 600, move position center
 for_window [title="ranger" class="St"] floating enable, border none, resize set 1100 700, move position center
 
 # Start picom on startup
@@ -56,7 +56,7 @@ bindsym $mod+w              exec $TERM -e $EDITOR -c "VimwikiIndex"
 bindsym $mod+Print          exec scrshot -u window
 bindsym Print               exec scrshot screen
 bindsym $mod+a              exec $TERM -e ranger
-bindsym $mod+m              exec $TERM -e ncmpcpp
+bindsym $mod+m              exec $TERM -e ~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug
 # bindsym $mod+x              exec $TERM -e calcurse
 bindsym $mod+x              exec $TERM -e tmux new-session -A -s "1"
 bindsym $mod+Shift+m        exec soulseekqt

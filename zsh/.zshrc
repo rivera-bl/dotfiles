@@ -2,11 +2,17 @@
 source "$HOME/.config/zsh/.zalias"
 #Source prompt style
 source "$HOME/.config/zsh/.zprompt"
+stty stop undef
 
 # di=directory,ow=otherwriteable, 
 export LS_COLORS="di=90:ex=100:*.mp3=1;32;41:ow=90"
 
 bindkey -v                      #Enable Vi-Mode
+bindkey "^R" history-incremental-pattern-search-backward
+# ^S is taken by: stty -a | grep '\^S'
+# We have to unmap it:
+stty stop undef
+bindkey "^S" history-incremental-pattern-search-forward
 setopt autocd                   #Enable Auto-cd	
 # setopt rcquotes
 

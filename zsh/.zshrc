@@ -3,6 +3,9 @@ source "$HOME/.config/zsh/.zalias"
 #Source prompt style
 source "$HOME/.config/zsh/.zprompt"
 
+# di=directory,ow=otherwriteable, 
+export LS_COLORS="di=90:ex=100:*.mp3=1;32;41:ow=90"
+
 bindkey -v                      #Enable Vi-Mode
 setopt autocd                   #Enable Auto-cd	
 # setopt rcquotes
@@ -52,7 +55,6 @@ function x11-clip-wrap-widgets() {
         zle -N $widget _x11-clip-wrapped-$widget
     done
 }
-
 
 local copy_widgets=(
     vi-yank vi-yank-eol vi-delete vi-backward-kill-word vi-change-whole-line

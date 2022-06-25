@@ -46,9 +46,8 @@ for_window [title="ranger" class="St"] floating enable, border none, resize set 
 # Start picom on startup
 exec --no-startup-id picom
 
-bindsym $mod+t              exec $TERM
 bindsym $mod+v              exec $TERM -e $EDITOR
-bindsym $mod+Shift+t        exec floati3 $TERM "resize set 920 380"
+bindsym $mod+t              exec floati3 $TERM "resize set 920 380"
 bindsym $mod+Shift+w        exec $BROWSER 
 bindsym $mod+z              exec zeal
 bindsym $mod+d              exec dmenu_run

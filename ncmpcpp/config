@@ -275,8 +275,8 @@ song_status_format = {{%a - }{%t}}|{%f}
 
 # GET COVER ART WITH ncmpcpp-ueberzug
 execute_on_song_change="~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
-# needed so the image gets resized when the size of the window changes
-execute_on_player_state_change = "~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
+# so the image gets resized when the size of the window changes
+# execute_on_player_state_change = "~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
 visualizer_look = "  "
 startup_screen = visualizer 
 startup_slave_screen = playlist
@@ -373,7 +373,7 @@ data_fetching_delay = no
 #
 #generate_win32_compatible_filenames = yes
 #
-#allow_for_physical_item_deletion = no
+allow_for_physical_item_deletion = yes
 #
 ##
 ## Note: If you set this variable, ncmpcpp will try to get info from last.fm in

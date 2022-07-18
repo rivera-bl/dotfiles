@@ -19,9 +19,8 @@
         lazygit
       ];
     in {
-      packages.defaultPackage = with pkgs;
+      packages.default = with pkgs;
         neovim.override {
-          enable = true;
           vimAlias = true;
           viAlias = true;
           configure = {
@@ -60,20 +59,10 @@
           buildInputs = deps;
         };
 
-      /*
-       nixosModule = {config, ...}: {
-       */
-      /*
-       environment.variables.EDITOR = "nvim";
-       */
-      /*
-       environment.shellAliases = {more = "nvim -";};
-       */
-      /*
-       environment.systemPackages = [self.defaultPackage."${system}"];
-       */
-      /*
-       };
-       */
+      ## nixosModule = {config, ...}: {
+      ##   environment.variables.EDITOR = "nvim";
+      ##   environment.shellAliases = {more = "nvim -";};
+      ##   environment.systemPackages = [self.defaultPackage."${system}"];
+      ## }; */
     });
 }

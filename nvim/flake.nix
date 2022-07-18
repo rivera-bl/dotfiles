@@ -13,10 +13,13 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
       deps = with pkgs; [
-        cargo rustc rnix-lsp lazygit
+        cargo
+        rustc
+        rnix-lsp
+        lazygit
       ];
     in {
-      packages.default = with pkgs;
+      packages.defaultPackage = with pkgs;
         neovim.override {
           vimAlias = true;
           viAlias = true;

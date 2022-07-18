@@ -58,11 +58,5 @@
         mkShell {
           buildInputs = deps;
         };
-
-      ## nixosModule = {config, ...}: {
-      ##   environment.variables.EDITOR = "nvim";
-      ##   environment.shellAliases = {more = "nvim -";};
-      ##   environment.systemPackages = [self.defaultPackage."${system}"];
-      ## }; */
     });
 }

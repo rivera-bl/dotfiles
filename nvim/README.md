@@ -161,13 +161,21 @@ dontCheck = true;
   - [x] install treesitter languages
   - [x] build BufSurf plugin from source like [this][11]
   - [ ] install every language server
-    - rnix, terraformls, jsonls, sumneko_lua, yamlls
-    - [x] install rnix first
-    - [x] get rid of nvim-lsp-installer
+    - [x] rnix
+    - [x] terraformls
+    - [ ] sumneko_lua
+    - [ ] jsonls
+    - [ ] yamlls
   - [x] solve telescope functions load
     - [ ] format mappings calls using functions and loops
   - [ ] manage plugins and LS with flakes so we can pin the versions
 !- [ ] add all the configuration files
+  - [ ] colorscheme
+  - [ ] colorizer
+  - [ ] treesitter
+  - [ ] lualine
+  - [ ] vim/functions
+  - [ ] vim/plugins
   - [ ] ?function to read recursively all the config files
 - [ ] structure README's,
   - one for each package and one for the main project

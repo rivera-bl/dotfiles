@@ -160,6 +160,8 @@ dontCheck = true;
 - [x] install vimplugins available on nixpkgs and place them on a different file
 !- [ ] devise a seamlessly flow for the steps of customatizing neovim
     - upload to github, update flake, rebuild nixos
+      - ?create script/hook to watch for git added files
+      - [ ] point the flake to local system to skip the push step
   - [x] install treesitter languages
   - [x] build BufSurf plugin from source like [this][11]
   - [x] install language servers

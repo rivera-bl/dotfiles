@@ -149,5 +149,17 @@ require'lspconfig'.sumneko_lua.setup {
   },
 }
 
+-- yaml
+-- https://www.schemastore.org/json/
+require'lspconfig'.yamlls.setup {
+  on_attach = on_attach,
+  settings = {
+    yaml = {
+      schemas = {
+        ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "/*.yaml",
+      },
+    },
+  }
+}
 
 return M

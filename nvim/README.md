@@ -162,12 +162,12 @@ dontCheck = true;
     - upload to github, update flake, rebuild nixos
   - [x] install treesitter languages
   - [x] build BufSurf plugin from source like [this][11]
-  - [ ] install language servers
+  - [x] install language servers
     - [x] rnix
     - [x] terraformls
     - [x] sumneko_lua
-    - [ ] yamlls
-    - ?check if there are performance differences on language servers on_attach compared with Packer
+    - [x] yamlls
+    - [x] ?check if there are performance differences on language servers on_attach compared with Packer
   - [x] solve telescope functions load
     - [ ] format mappings calls using functions and loops
   - [ ] manage plugins and LS with flakes so we can pin the versions
@@ -178,6 +178,8 @@ dontCheck = true;
   - [ ] lualine
   - [ ] vim/functions
   - [ ] vim/plugins
+  - [ ] fix lsp not getting cmp_lsp settings
+    - ?may have to move cmp_lsp to lsp file
   - [ ] ?function to read recursively all the config files
 - [ ] structure README's,
   - one for each package and one for the main project

@@ -16,8 +16,9 @@
         rnix = [ cargo rustc rnix-lsp lazygit ];
         tf = [ terraform terraform-ls ];
         sumneko = [ sumneko-lua-language-server ];
+        yaml = [ yaml-language-server ];
       };
-      deps = ls.rnix ++ ls.tf ++ ls.sumneko;
+      deps = ls.rnix ++ ls.tf ++ ls.sumneko ++ ls.yaml;
     in {
       packages.default = with pkgs;
         neovim.override {

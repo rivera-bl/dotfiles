@@ -158,14 +158,16 @@ dontCheck = true;
 ## TODO
 
 - [x] install vimplugins available on nixpkgs and place them on a different file
+!- [ ] devise a seamlessly flow for the steps of customatizing neovim
+    - upload to github, update flake, rebuild nixos
   - [x] install treesitter languages
   - [x] build BufSurf plugin from source like [this][11]
-  - [ ] install every language server
+  - [ ] install language servers
     - [x] rnix
     - [x] terraformls
-    - [ ] sumneko_lua
-    - [ ] jsonls
+    - [x] sumneko_lua
     - [ ] yamlls
+    - ?check if there are performance differences on language servers on_attach compared with Packer
   - [x] solve telescope functions load
     - [ ] format mappings calls using functions and loops
   - [ ] manage plugins and LS with flakes so we can pin the versions

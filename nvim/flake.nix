@@ -12,12 +12,9 @@
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
-      deps = with pkgs; [
-        cargo
-        rustc
-        rnix-lsp
-        lazygit
-      ];
+      rnixls = with pkgs; [ cargo rustc rnix-lsp lazygit ];
+      terraformls = with pkgs; [ terraform terraform-ls ];
+      deps = rnixls ++ terraformls;
     in {
       packages.default = with pkgs;
         neovim.override {

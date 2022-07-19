@@ -101,6 +101,26 @@ end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
+-------------------
+-- Language Servers
+-------------------
+-- rnix
 require'lspconfig'.rnix.setup{}
+
+-- terraform
+local tfcapabilities = vim.lsp.protocol.make_client_capabilities()
+tfcapabilities.textDocument.completion.completionItem.snippetSupport = true
+tfcapabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
+
+require'lspconfig'.terraformls.setup{
+  on_attach = on_attach,
+  capabilities = tfcapabilities
+}
 
 return M

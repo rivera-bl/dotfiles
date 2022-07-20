@@ -99,3 +99,48 @@ vim.cmd('au filetype markdown setlocal fo=wnt')
 
 -- Create .pdf out of current .md file
 vim.cmd('autocmd BufWritePost ~/dev/jekyll/codeblog/_posts/*.md silent !mkdir -p /tmp/blog-preview && pandoc %:p -o /tmp/blog-preview/tmp.pdf &')
+
+-----------------------
+--- BUFSURF
+-----------------------
+vim.g['BufSurfIgnore'] = 'NetrwTreeListing,NetrwTreeListing[-]'
+
+-----------------------
+--- NETRW
+-----------------------
+vim.g["netrw_preview"]       = 1
+vim.g["netrw_liststyle"]     = 3
+vim.g["netrw_banner"]        = 0
+vim.g["netrw_winsize"]       = 15
+
+-----------------------
+--- TERRAFORM
+-----------------------
+vim.g["terraform_fmt_on_save"]  = 1
+vim.g["terraform_align"]        = 1
+
+-----------------------
+--- ZEAVIM
+-----------------------
+vim.g["zv_get_docset_by"] = "['ext', 'file', 'ft']"
+vim.g["_file_types"] = [[{
+            \   'tf'                : 'terraform',
+            \   'pkr.hcl'           : 'packer',
+            \   'yml'               : 'kubernetes,ansible',
+            \   'yaml'              : 'kubernetes,ansible',
+            \   'tex'               : 'latex',
+            \   'Vagrantfile'       : 'vagrant'
+            \ }]]
+
+-----------------------
+--- MARKDOWN
+-----------------------
+vim.g["m_markdown_folding_disabled"] = 1
+
+-----------------------
+--- VIMUX
+-----------------------
+vim.g["VimuxHeight"]      = "20"
+vim.g["VimuxOrientation"] = "v"
+vim.g["VimuxUseNearest"]  = 1
+vim.g["VimuxCloseOnExit"] = 1

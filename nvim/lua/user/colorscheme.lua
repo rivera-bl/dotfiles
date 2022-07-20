@@ -36,3 +36,5 @@ Color.new('turquoise', '#698b69')
 -- not working?
 Group.new('Function'        , colors.red      , colors.background , styles.italic)
 Group.new('luaFunctionCall' ,  groups.Function   , groups.Function, groups.Function)
+
+colorbuddy.colorscheme('')

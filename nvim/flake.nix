@@ -13,7 +13,7 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
       ls = with pkgs; {
-        rnix = [ cargo rustc rnix-lsp lazygit ];
+        rnix = [ cargo rustc rnix-lsp ];
         tf = [ terraform terraform-ls ];
         sumneko = [ sumneko-lua-language-server ];
         yaml = [ yaml-language-server ];
@@ -38,6 +38,8 @@
                 ${builtins.readFile ./lua/lualine_lua/init.lua}
                 ${builtins.readFile ./lua/user/indentline.lua}
                 ${builtins.readFile ./lua/user/cmp.lua}
+                ${builtins.readFile ./lua/user/colorscheme.lua}
+                ${builtins.readFile ./lua/user/colorizer.lua}
                 ${builtins.readFile ./lua/user/lsp/init.lua}
               EOF
             '';

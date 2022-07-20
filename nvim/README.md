@@ -89,6 +89,12 @@ docker load < result
 docker run -ti --rm nvim-flake
 ```
 
+### Updating your inputs
+
+```
+nix flake lock --update-input <input-name>
+```
+
 ## Examples
 
 ### Vimconf
@@ -174,13 +180,14 @@ dontCheck = true;
     - [ ] format mappings calls using functions and loops
   - [ ] manage plugins and LS with flakes so we can pin the versions
 !- [ ] add all the configuration files
-  - [ ] colorscheme
-  - [ ] colorizer
-  - [ ] treesitter
-  - [ ] lualine
-  - [ ] vim/functions
-  - [ ] vim/plugins
+  - [x] colorscheme
+  - [x] colorizer
+  - [x] lualine
   - [ ] fix lsp not getting cmp_lsp settings
+  - [x] pass plugin/plugins.vim to lua
+  - [ ] symlink to .config so we can test changes quickly
+      - this will force to maintain a certain lua structure with init.lua on root
+      - order files
     - ?may have to move cmp_lsp to lsp file
   - [ ] ?function to read recursively all the config files
 - [ ] structure README's,

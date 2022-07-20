@@ -38,7 +38,7 @@ in {
     # looks:
     nvim-web-devicons
     lualine-nvim
-    colorbuddy-nvim #?
+    colorbuddy-nvim
     # functions:
     tabular
     vim-wordmotion

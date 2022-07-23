@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "nixos";
-  home.homeDirectory = "/home/nixos";
+ /* home.username = "nixos"; */
+  /* home.homeDirectory = "/home/nixos"; */
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -14,12 +14,12 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "22.05";
+  /* home.stateVersion = "22.05"; */
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.packages = [ tmux ];
+  home.packages = with pkgs; [ tmux fish ];
   programs.tmux = {
     enable = true;
     extraConfig = lib.strings.fileContents ./tmux/tmux.conf;

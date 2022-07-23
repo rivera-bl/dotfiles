@@ -46,13 +46,13 @@
   # could manage fish with configuration.nix since you can only set it as default shell there
   programs.fish = {
     enable = true;
-    functions = {};
+    functions = {
+      fish_greeting = "";
+      nix-fish = "nix-shell $argv --command fish";
+    };
     plugins = [];
 
     interactiveShellInit = ''
-      set fish_greeting ""
-    '' +
-    ''
       fish_vi_key_bindings
       bind -M default yy fish_clipboard_copy
       bind -M default Y fish_clipboard_copy

@@ -42,4 +42,30 @@
     ];
     extraConfig = lib.strings.fileContents ./tmux/tmux.conf;
   };
+
+  # could manage fish with configuration.nix since you can only set it as default shell there
+  programs.fish = {
+    enable = true;
+    functions = {};
+    plugins = [];
+
+    interactiveShellInit = ''
+      set fish_greeting ""
+    '' +
+    ''
+      fish_vi_key_bindings
+      bind -M default yy fish_clipboard_copy
+      bind -M default Y fish_clipboard_copy
+      bind -M default p fish_clipboard_paste
+      bind -M insert -k nul accept-autosuggestion # ctrl-SPACE
+    '';
+    loginShellInit = "";
+    shellInit = "";
+
+    shellAbbrs = {
+      nrs = "sudo nixos-rebuild switch --flake ~/nixos/system/#";
+      nrh = "home-manager switch --flake ~/nixos/home/#nixos";
+    };
+    shellAliases = {};
+  };
 }

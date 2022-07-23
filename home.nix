@@ -25,6 +25,12 @@
     TERM = "alacritty";
   };
 
+  xsession.windowManager.i3 = {
+    enable = true;
+    package = pkgs.i3-gaps;
+    extraConfig = builtins.readFile ./i3/config;
+  };
+
   # not necessary if using enable = true
   /* home.packages = with pkgs; [ ]; */
   programs.tmux = {

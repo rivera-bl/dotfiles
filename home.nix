@@ -19,7 +19,14 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [ tmux fish ];
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "firefox";
+    TERM = "alacritty";
+  };
+
+  # not necessary if using enable = true
+  /* home.packages = with pkgs; [ ]; */
   programs.tmux = {
     enable = true;
     extraConfig = lib.strings.fileContents ./tmux/tmux.conf;

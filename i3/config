@@ -46,8 +46,13 @@ for_window [title="ranger" class="St"] floating enable, border none, resize set 
 # Start picom on startup
 exec --no-startup-id picom
 
-bindsym $mod+v              exec $TERM -e $EDITOR
-bindsym $mod+t              exec floati3 $TERM "resize set 920 380"
+# for some reason it ain't picking the $TERM defined on home.sessionVariables
+# bindsym $mod+v              exec $TERM -e $EDITOR
+# bindsym $mod+t              exec $TERM
+bindsym $mod+v              exec alacritty -e $EDITOR
+bindsym $mod+t              exec alacritty
+# won't bother in nixifying this script since i am ditching i3
+# bindsym $mod+Shift+t        exec floati3 $TERM "resize set 920 380"
 bindsym $mod+Shift+w        exec $BROWSER 
 bindsym $mod+z              exec zeal
 bindsym $mod+d              exec dmenu_run

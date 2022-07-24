@@ -50,7 +50,6 @@
     enable = true;
     functions = {
       fish_greeting = "";
-      nix-fish = "nix-shell $argv --command fish";
     };
     plugins = [];
 
@@ -68,7 +67,9 @@
       nrs = "sudo nixos-rebuild switch --flake ~/nixos/system/#";
       nrh = "home-manager switch --flake ~/nixos/home/#nixos";
     };
-    shellAliases = {};
+    shellAliases = {
+      nix-shell = "nix-shell --command 'fish'";
+    };
   };
 
   programs.starship = {
@@ -166,7 +167,7 @@
       };
 
       font = {
-        size = 8.0;
+        size = 7.0;
         draw_bold_text_with_bright_colors = false;
         normal = {
           family = "monospace";

@@ -56,6 +56,9 @@ home-manager uninstall
     - I if ever need to merge build the system with home-manager included I can add the flake as an input
     - If doing a lot of changes and testing I could use `config.lib.file.mkOutOfStoreSymlink` temporarily
 
+- After a bit of usage I can say:
+    - hm build takes half the time of nixos-rebuild
+
 ### Installation
 
 - Test the tool:
@@ -91,13 +94,30 @@ man home-configuration.nix
     - tmux-yank
     - fish -M default clipboard
     - X xsel xclip
-- [ ] install hardware configuration for lenovo X1
-    - for now I can `startx` and then `exec i3`
+    - [ ] find a solution to copy through ssh
+- [ ] move every program to their own file
+- [x] fix X copy/paste not working, like if X wasn't running, but systemctl status display-manager.service says it is indeed running, this happens when starting X automatically with the display-manager of lightdm
+  - check for options via `man configuration.nix`
+!- [ ] install a font to render glyphs
+- [x] fix keys:
+    - [x] change layout to be able to use < >
+    - [x] prtsc to be mod
+    - [x] faster scroll back with keys
+    - ! [ ] make a key Ñ
+        - can use the FN as compose key
+        - or i could go back to the latam layout and use this FN to compose < >, but it would be on a very awkward spot
+!- [ ] configure colorscheme system-wide with nix-colors
+    - i3, alacritty, startship, fish, neovim
+- [ ] change docker for podman
  - [ ] install every home program, the goal is to migrate every program I currently use so it is available in case I ever want to go back
+    - [ ] neovim
+        - for now install as a flake
+        - [ ] install telescope dependencies
     - [x] tmux
         - [x] install plugins
         - [x] install yank plugin to copy to clipboard
-!        - [ ] install kube-context plugin to show on powerline
+        - [ ] install kube-context plugin to show on powerline
+        - [ ] find a way to show the current ip of the machine we are connected to on that pane
     - [x] xclip (system wide)
     - [x] fish
         - [x] create abbr to build hm and nixos faster
@@ -106,26 +126,32 @@ man home-configuration.nix
         - [x] paste from tmux mouse selection to clipboard, so we can use it with `p` on console and vim with tmux-yank
         - [x] create some [functions][12]
         - [x] autocomplete suggestions with ctrl-SPACE 
+        - [ ] how to make available !$ and !!
     - [x] [starship][14]
         - configure for:
             - [x] prompt
             - [x] nix-shell
     - [x] alacritty
+        - [x] configure
+        - [ ] improve tmux integration
+            - why the cursor blinks in alacritty but not inside of tmux?
 !    - [x] i3
-        - [ ] solve .xinitrc
-        - [ ] tweak i3config
-        - [ ] install i3bars
+        - [x] solve .xinitrc
+        - [ ] move i3config to nix
+        - [ ] fix that starts on window n10
+        - [ ] install i3blocks
     - [ ] fzf
+        - [ ] configure to use with fish ctrl-R
     - [ ] mpd
     - [ ] ncmpcpp
     - [ ] zathura
     - [ ] zeal
     - [ ] lazygit
+      - [ ] configure mappings
     - [ ] zsh
 - [ ] test out alacritty multiplexing mode
     - i don't think it will be better than tmux
 - [ ] install rust tools that improve cli workflow
-- [ ] do a table of comparision of the different ways of managing programs with nixos/home-mananager/mkOutOfStoreSymlink/in-nix-language
 - [ ] eventually I would like to create a nixos-module and a flake with my console-drive development environment
     - the module could have an option for `graphical = boolean;` for not installing alacritty
         - in its core should be `nvim` `fish` `alacritty` `tmux`
@@ -145,3 +171,5 @@ man home-configuration.nix
 [13]: https://github.com/fish-shell/fish-shell/issues/4028 
 [14]: https://starship.rs/config/
 [15]: https://starship.rs/config/#style-strings
+[16]: https://discourse.nixos.org/t/opening-i3-from-home-manager-automatically/4849/10
+[17]: https://github.com/alacritty/alacritty/blob/master/alacritty.yml

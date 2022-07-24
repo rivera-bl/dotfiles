@@ -1,6 +1,8 @@
 # https://i3wm.org/docs/userguide.html
 
 set $mod Mod4
+# ain't picking the $TERM defined on home.sessionVariables
+set $TERM alacritty
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -47,16 +49,13 @@ for_window [title="ranger" class="St"] floating enable, border none, resize set 
 exec --no-startup-id picom
 
 # for some reason it ain't picking the $TERM defined on home.sessionVariables
-# bindsym $mod+v              exec $TERM -e $EDITOR
-# bindsym $mod+t              exec $TERM
-bindsym $mod+v              exec alacritty -e $EDITOR
-bindsym $mod+t              exec alacritty
+bindsym $mod+v              exec $TERM -e $EDITOR
+bindsym $mod+t              exec $TERM
 # won't bother in nixifying this script since i am ditching i3
 # bindsym $mod+Shift+t        exec floati3 $TERM "resize set 920 380"
 bindsym $mod+Shift+w        exec $BROWSER 
 bindsym $mod+z              exec zeal
 bindsym $mod+d              exec dmenu_run
-bindsym $mod+w              exec $TERM -e $EDITOR -c "VimwikiIndex"
 bindsym $mod+Print          exec scrshot -u window
 bindsym Print               exec scrshot screen
 bindsym $mod+a              exec $TERM -e ranger

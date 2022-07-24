@@ -36,12 +36,15 @@ home-manager uninstall
 
 - In configuration.nix if I set inside the programs the option of `enabled = false;` then the other options will be skipped, this way we can manage the configurations thorough XDG_CONFIG_HOME
 
+- Some programs should be installed system-wide like `fish` so they can be used by root too
+
 ### Conclusion
 
 - Advantages of hm:
     - some programs have more options like `fish`
     - separation of concerns
     - don't mess with system wide generations
+    - nix language is really helpful when managing plugins, for example with tmux or nvim, no overhead
     - ?it is the standard used by jonringer and Misterio77
 
 - Usage of hm:
@@ -71,9 +74,10 @@ home-manager uninstall
 nix build --no-link .#homeConfigurations.jdoe.activationPackage
 "$(nix path-info .#homeConfigurations.jdoe.activationPackage)"/activate
 home-manager switch --flake .#nixos
+man home-configuration.nix
 ```
 
-- Configuration of `flake.nix` has to be like [this][10], not with the values on [`home.nix`][3]
+- Configuration of `flake.nix` has to be like [this][10], not with the values on [`home.nix`][3]. Although it has been removed in [22.11 release][11]
 
 ## TODO
 
@@ -83,23 +87,48 @@ home-manager switch --flake .#nixos
 - [x] create a basic home.nix
 - [x] install home-manager standalone with flake
 - [x] move home-manager README section to home repo
-- [ ] install every home program, the goal is to migrate every program I currently use so it is available in case I ever want to go back
+- [ ] document copy-paste solution mouse/shell/vim
+    - tmux-yank
+    - fish -M default clipboard
+    - X xsel xclip
+- [ ] install hardware configuration for lenovo X1
+    - for now I can `startx` and then `exec i3`
+ - [ ] install every home program, the goal is to migrate every program I currently use so it is available in case I ever want to go back
     - [x] tmux
-    - [ ] fish
-    - [ ] zsh
-    - [ ] alacritty
-    - [ ] i3
+        - [x] install plugins
+        - [x] install yank plugin to copy to clipboard
+!        - [ ] install kube-context plugin to show on powerline
+    - [x] xclip (system wide)
+    - [x] fish
+        - [x] create abbr to build hm and nixos faster
+        - [x] vi mode
+        - [x] paste between shell and vim
+        - [x] paste from tmux mouse selection to clipboard, so we can use it with `p` on console and vim with tmux-yank
+        - [x] create some [functions][12]
+        - [x] autocomplete suggestions with ctrl-SPACE 
+    - [x] [starship][14]
+        - configure for:
+            - [x] prompt
+            - [x] nix-shell
+    - [x] alacritty
+!    - [x] i3
+        - [ ] solve .xinitrc
+        - [ ] tweak i3config
+        - [ ] install i3bars
     - [ ] fzf
     - [ ] mpd
     - [ ] ncmpcpp
     - [ ] zathura
     - [ ] zeal
     - [ ] lazygit
+    - [ ] zsh
 - [ ] test out alacritty multiplexing mode
     - i don't think it will be better than tmux
 - [ ] install rust tools that improve cli workflow
 - [ ] do a table of comparision of the different ways of managing programs with nixos/home-mananager/mkOutOfStoreSymlink/in-nix-language
-- [ ] manage secrets
+- [ ] eventually I would like to create a nixos-module and a flake with my console-drive development environment
+    - the module could have an option for `graphical = boolean;` for not installing alacritty
+        - in its core should be `nvim` `fish` `alacritty` `tmux`
 
 [1]: https://github.com/Mic92/dotfiles/tree/master/nixos
 [2]: https://nix-community.github.io/home-manager/index.html#sec-flakes-nixos-module 
@@ -111,3 +140,8 @@ home-manager switch --flake .#nixos
 [8]: https://gist.github.com/sts10/daadbc2f403bdffad1b6d33aff016c0a
 [9]: https://www.nushell.sh/
 [10]: https://github.com/nix-community/home-manager/issues/2073
+[11]: https://github.com/nix-community/home-manager/blob/master/flake.nix#L30-L33 
+[12]: https://fishshell.com/docs/current/cmds/function.html
+[13]: https://github.com/fish-shell/fish-shell/issues/4028 
+[14]: https://starship.rs/config/
+[15]: https://starship.rs/config/#style-strings

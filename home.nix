@@ -51,20 +51,20 @@
     enable = true;
     functions = {
       fish_greeting = "";
-      sudo =
+      bangbang =
         "if test \"$argv\" = !!
           eval command sudo $history[1]
         else
           command sudo $argv
         end";
-      bind_bang =
+      bang =
         "switch (commandline -t)
           case \"!\"
               commandline -t $history[1]; commandline -f repaint
           case \"*\"
               commandline -i !
         end";
-      bind_dollar =
+      dollar =
         "switch (commandline -t)
           case \"!\"
               commandline -t \"\"
@@ -82,8 +82,8 @@
       bind -M default Y fish_clipboard_copy
       bind -M default p fish_clipboard_paste
       bind -M insert -k nul accept-autosuggestion # ctrl-SPACE
-      bind -M insert ! bind_bang
-      bind -M insert '$' bind_dollar
+      bind -M insert ! bang
+      bind -M insert '$' dollar
     '';
     loginShellInit = "";
     shellInit = "";
@@ -266,5 +266,10 @@
     };
   };
 
+  programs.lazygit = {
+    enable = true;
+    settings = {
+      
+    };
   };
 }

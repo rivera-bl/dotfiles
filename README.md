@@ -99,6 +99,7 @@ man home-configuration.nix
 - [x] fix X copy/paste not working, like if X wasn't running, but systemctl status display-manager.service says it is indeed running, this happens when starting X automatically with the display-manager of lightdm
   - check for options via `man configuration.nix`
 !- [ ] install a font to render glyphs
+- [ ] show notifications when long running commands finish
 - [x] fix keys:
     - [x] change layout to be able to use < >
     - [x] prtsc to be mod
@@ -113,6 +114,7 @@ man home-configuration.nix
     - [ ] neovim
         - for now install as a flake
         - [ ] install telescope dependencies
+        - [ ] install autoformater for nix
     - [x] tmux
         - [x] install plugins
         - [x] install yank plugin to copy to clipboard
@@ -126,7 +128,7 @@ man home-configuration.nix
         - [x] paste from tmux mouse selection to clipboard, so we can use it with `p` on console and vim with tmux-yank
         - [x] create some [functions][12]
         - [x] autocomplete suggestions with ctrl-SPACE 
-        - [ ] how to make available !$ and !!
+        - [x] how to make available !$ and !!
     - [x] [starship][14]
         - configure for:
             - [x] prompt
@@ -140,8 +142,9 @@ man home-configuration.nix
         - [ ] move i3config to nix
         - [ ] fix that starts on window n10
         - [ ] install i3blocks
-    - [ ] fzf
-        - [ ] configure to use with fish ctrl-R
+    - [x] fzf
+        - [x] configure to use with fish ctrl-R
+        - [ ] find a way to select and execute command with one key
     - [ ] mpd
     - [ ] ncmpcpp
     - [ ] zathura
@@ -173,3 +176,4 @@ man home-configuration.nix
 [15]: https://starship.rs/config/#style-strings
 [16]: https://discourse.nixos.org/t/opening-i3-from-home-manager-automatically/4849/10
 [17]: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+[18]: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.m

@@ -20,15 +20,6 @@ home.file = {
 - Either way should keep most programs installed with home-manager in a separate file, so we can import them by demand to the system config, and try out new programs in a safer way
 - The ammount of documentation for the usage and program options is a breeze. I wonder if we can use the same options provided by home-manager in the pkgs installed directly by NixOS, for ex. alacritty. At least doing a glimpse at tmux in nixpkgs it does have the same options.
 
-- Tested the tool. It doesn't get that long build, around 1-1.5s when only managing tmux.
-```
-nix-shell -p home-manager
-mkdir /tmp/test-homemanager && cd !$
-touch home.nix
-home-manager -f home.nix switch
-home-manager uninstall
-```
-
 - Will manage every program system-wide, if I get into issues will try home-manager.
 - Although I will use external config files to configure them as a start, because I already have many programs configured this way, configuring with nix language could be useful to traverse a variable across many programs.
 
@@ -145,6 +136,8 @@ man home-configuration.nix
     - [x] fzf
         - [x] configure to use with fish ctrl-R
         - [ ] find a way to select and execute command with one key
+            - most of the cool functions are already written in bash
+            - execute a bash script within a fish function with `bash -c ''`
     - [ ] mpd
     - [ ] ncmpcpp
     - [ ] zathura
@@ -156,8 +149,12 @@ man home-configuration.nix
     - i don't think it will be better than tmux
 - [ ] install rust tools that improve cli workflow
 - [ ] eventually I would like to create a nixos-module and a flake with my console-drive development environment
-    - the module could have an option for `graphical = boolean;` for not installing alacritty
-        - in its core should be `nvim` `fish` `alacritty` `tmux`
+    - this would be composed of `fzf` `shell` `tmux` `starship` `?font`
+      - the shell for now will be `fish`
+      - `nvim` will not be included because it is a very opiniated tool
+      - the terminal either because it offers little functionality for this use
+          - a terminal like `alacritty` can't be run on a non-graphical environment
+          - the user who would try this module/flake will have it's own terminal
 
 [1]: https://github.com/Mic92/dotfiles/tree/master/nixos
 [2]: https://nix-community.github.io/home-manager/index.html#sec-flakes-nixos-module 

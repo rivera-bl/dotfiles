@@ -6,20 +6,6 @@ alias cbi="cd $HOME/.local/bin"
 alias cnf="cd $HOME/.config"
 alias cst="cd $HOME/.config/st"
 
-#FILES
-alias zsc="$EDITOR ~/.config/zsh/.zshrc"
-alias zsa="$EDITOR ~/.config/zsh/.zalias"
-alias zsp="$EDITOR ~/.config/zsh/.zprompt"
-alias zss="$EDITOR ~/.config/zsh/.zsyntax"
-alias i3c="$EDITOR ~/.config/i3/config"
-alias i3b="$EDITOR ~/.config/i3blocks/config"
-alias nvc="$EDITOR ~/.config/nvim/init.vim"
-alias stc="$EDITOR ~/.config/st/config.h"
-alias pic="$EDITOR ~/.config/picom/picom.conf"
-alias xri="$EDITOR ~/.Xresources"
-alias xii="$EDITOR ~/.xinitrc"
-alias zpi="$EDITOR ~/.zprofile"
-alias xft="sudo $EDITOR /etc/X11/xorg.conf.d/fonts.conf"
 
 #COMMANDS
 #MAIN

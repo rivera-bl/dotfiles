@@ -120,6 +120,38 @@ man home-configuration.nix
         - [x] create some [functions][12]
         - [x] autocomplete suggestions with ctrl-SPACE 
         - [x] how to make available !$ and !!
+    - [x] install kubectl,minikube to test fzf-kubectl
+    - [x] zsh learn files importing order
+        - at system
+    - [x] zsh install plugins
+        - [x] kubectl fzf
+            - test with a cluster, terra cenco
+        - [x] abbrev
+        - [x] docker completion
+        - [x] fish autosuggestions
+          - accept CTRL-SPACE
+    - [x] manage the aliases with .zalias
+    - [ ] replace lazygit/add new tool for diff
+        - needs full vertical side by side cherrypicking
+    - [ ] zsh add --> twisting line to prompt
+        - check starship docs
+        - check newm video
+    - [ ] install fzf plugins
+        - [ ] tmuxinator
+    - [ ] zsh copy-paste between zsh and vim
+    - [ ] zsh manage scripts and source by folders
+        - [ ] functions
+        - [ ] alias
+        - [ ] .sh .z* or extensionless?
+
+    - [ ] configure less
+        - [ ] mouse scrolling
+    - [ ] alias for kubectl actions: kd,kg,kx
+        - would get really fast with fzf-kubectl
+    - [ ] install aws-cli
+        - have to create an overlay and package, not in nixpkgs
+    - [x] download home-manager github
+    - [x] download nixpkgs github
     - [x] [starship][14]
         - configure for:
             - [x] prompt
@@ -174,3 +206,4 @@ man home-configuration.nix
 [16]: https://discourse.nixos.org/t/opening-i3-from-home-manager-automatically/4849/10
 [17]: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 [18]: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.m
+[19]: https://medium.com/@rajsek/zsh-bash-startup-files-loading-order-bashrc-zshrc-etc-e30045652f2e 

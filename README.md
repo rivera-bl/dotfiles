@@ -131,20 +131,24 @@ man home-configuration.nix
         - [x] fish autosuggestions
           - accept CTRL-SPACE
     - [x] manage the aliases with .zalias
-    - [ ] replace lazygit/add new tool for diff
-        - needs full vertical side by side cherrypicking
-    - [x] zsh add --> twisting line to prompt
-        - check starship docs
-        - check newm video
-    - [ ] get colored output from kubectl,docker and ls
-    - [ ] install fzf plugins
-        - [ ] tmuxinator
-    - [ ] zsh copy-paste between zsh and vim
+    - [x] change configuration.nix to get flake from dir
     - [ ] zsh manage scripts and source by folders
         - [ ] functions
         - [ ] alias
         - [ ] .sh .z* or extensionless?
+    - [ ] zsh copy-paste between zsh and vim
+    - [ ] zsh remove greeting from
+    - [ ] zsh syntax highlighting
+        - get colored output from kubectl,docker and ls
 
+    - [ ] configure lazygit
+        - colors from colors.nix
+        - [ ] remove command log
+        - [ ] more space to cherry pick windows
+          - [ ] or add new tool for diff
+            - full vertical side by side cherrypicking
+    - [ ] install fzf plugins
+        - [ ] tmuxinator
     - [ ] configure less
         - [ ] mouse scrolling
     - [ ] alias for kubectl actions: kd,kg,kx

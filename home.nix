@@ -381,8 +381,9 @@
     initExtraFirst = "";
     initExtra = "
       ${builtins.readFile ./zsh/.zalias}
+      ${builtins.readFile ./zsh/.zfunctions}
       bindkey '\\0' forward-char # accept-autosuggestion
-      ${builtins.readFile ./zsh/.kubectl_fzf.plugin.zsh}
+      zplug load
     ";
 
     # .zlogin
@@ -397,13 +398,13 @@
     shellAliases = {};
     shellGlobalAliases = {};
 
-    /* zplug = { */
-    /*   /1* zplugHome = "~/.config/zsh/.zplug"; *1/ */
-    /*   enable = true; */
-    /*   plugins = [ */
-    /*     { name = "bonnefoa/kubectl-fzf"; tags = [ defer:3 ]; } */
-    /*   ]; */
-    /* }; */
+    zplug = {
+      /* zplugHome = ~/.config/zsh/.zplug; */
+      enable = true;
+      plugins = [
+        { name = "bonnefoa/kubectl-fzf"; tags = [ defer:3 ]; }
+      ];
+    };
 
     plugins = [
     /* { */

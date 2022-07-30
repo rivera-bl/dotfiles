@@ -52,6 +52,7 @@
       zplug load
       # overwritten by zsh-abbr
       bindkey '\\0' forward-char # accept-autosuggestion
+      clear # fix
     ";
 
     # .zlogin
@@ -72,6 +73,7 @@
       plugins = [
         { name = "bonnefoa/kubectl-fzf"; tags = [ defer:3 ]; }
         { name = "olets/zsh-abbr"; }
+        { name = "zsh-users/zsh-syntax-highlighting"; tags = [ defer:2 ]; }
       ];
     };
 

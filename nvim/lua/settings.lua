@@ -106,6 +106,11 @@ vim.cmd('autocmd BufWritePost ~/dev/jekyll/codeblog/_posts/*.md silent !mkdir -p
 vim.g['BufSurfIgnore'] = 'NetrwTreeListing,NetrwTreeListing[-]'
 
 -----------------------
+--- LAZYGIT
+-----------------------
+vim.g['lazygit_floating_window_scaling_factor'] = 1.0
+
+-----------------------
 --- NETRW
 -----------------------
 vim.g["netrw_preview"]       = 1

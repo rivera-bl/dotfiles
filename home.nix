@@ -110,6 +110,12 @@
         end
 
         commandline -f repaint";
+
+      /* fzf-kubectl = */ 
+      /*   "bash -c */
+      /*   command -v fzf >/dev/null 2>&1 && { */ 
+      /*   source <(kubectl completion bash | sed 's#\"${requestComp}\" 2>/dev/null#\"${requestComp}\" 2>/dev/null | head -n -1 | fzf  --multi=0 #g') */
+      /*   }"; */
         };
 
     plugins = [
@@ -144,6 +150,7 @@
     };
     shellAliases = {
       nix-shell = "nix-shell --command 'fish'";
+      k = "kubectl";
     };
   };
 
@@ -324,5 +331,93 @@
     settings = {
       
     };
+  };
+
+  programs.zsh = {
+    enable = true;
+    autocd = true;
+    dotDir = ".config/zsh";
+    defaultKeymap = "vicmd";
+
+    enableAutosuggestions = true;
+    enableCompletion = true; # environment.pathsToLink = [ "/share/zsh" ];
+    enableSyntaxHighlighting = true;
+
+    dirHashes = {
+      hom = "$HOME/nixos/home/";
+      xom = "$HOME/nixos/system/";
+    };
+
+    history = {
+      path = "${config.xdg.dataHome}/zsh/zsh_history";
+      ignorePatterns = [""];
+      save = 10000;
+      size = 10000;
+    };
+
+    #######################################
+    # variables/files in order of execution
+    #######################################
+    # .zshenv
+    envExtra = "setopt no_global_rcs";
+
+    # .zprofile
+    profileExtra = "";
+
+    # .zshrc before completion init
+    initExtraBeforeCompInit = "";
+    completionInit= "
+      autoload -U compinit
+      compinit
+      zmodload zsh/complist
+      _comp_options+=(globdots)		# Include hidden files.
+
+      source <(kubectl completion zsh) 
+      ";
+
+    # TODO: split .zshrc here
+    # .zshcr
+    localVariables = {};
+    initExtraFirst = "";
+    initExtra = "
+      ${builtins.readFile ./zsh/.zalias}
+      bindkey '\\0' forward-char # accept-autosuggestion
+      ${builtins.readFile ./zsh/.kubectl_fzf.plugin.zsh}
+    ";
+
+    # .zlogin
+    loginExtra = "";
+
+    # .zlogout
+    logoutExtra = "";
+
+    # ?before or after zsh
+    sessionVariables = {};
+
+    shellAliases = {};
+    shellGlobalAliases = {};
+
+    /* zplug = { */
+    /*   /1* zplugHome = "~/.config/zsh/.zplug"; *1/ */
+    /*   enable = true; */
+    /*   plugins = [ */
+    /*     { name = "bonnefoa/kubectl-fzf"; tags = [ defer:3 ]; } */
+    /*   ]; */
+    /* }; */
+
+    plugins = [
+    /* { */
+    /*    # will source zsh-autosuggestions.plugin.zsh */
+    /*    name = "zsh-autosuggestions"; */
+    /*    src = pkgs.fetchFromGitHub { */
+    /*      owner = "zsh-users"; */
+    /*      repo = "zsh-autosuggestions"; */
+    /*      rev = "v0.4.0"; */
+    /*      sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc"; */
+    /*      }; */
+    /*    } */
+    ];
+
+    # various ohmyzsh options
   };
 }

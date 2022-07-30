@@ -10,6 +10,11 @@ alias cst="cd $HOME/.config/st"
 alias nrs="sudo nixos-rebuild switch --flake ~/nixos/system/#";
 alias nrh="home-manager switch --flake ~/nixos/home/#nixos";
 
+# K8
+alias k="kubectl";
+alias kg="kubectl get";
+alias kx="kubectl exec -ti";
+
 #COMMANDS
 #MAIN
 alias mki="sudo make clean install"

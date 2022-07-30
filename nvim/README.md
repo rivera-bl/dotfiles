@@ -137,6 +137,8 @@ end
 
 - The `nixos-22.05` branch has the `v0.7.0` while `master` has the `v0.7.2` which is the latest stable release
 
+- Not an issue but important to emphasize that with this way of config nvim will not use the files in XDG_CONFIG, because its bundled with its own configuration files
+
 #### nvim-lsp-installer
 
 - Was getting this error when trying to build the `nvim-lsp-installer` plugin
@@ -163,45 +165,20 @@ dontCheck = true;
 
 ## TODO
 
-- [x] install vimplugins available on nixpkgs and place them on a different file
-!- [ ] devise a seamlessly flow for the steps of customatizing neovim
+- [ ] devise a seamlessly flow for the steps of customatizing neovim
     - upload to github, update flake, rebuild nixos
       - ?create script/hook to watch for git added files
       - [ ] point the flake to local system to skip the push step
-  - [x] install treesitter languages
-  - [x] build BufSurf plugin from source like [this][11]
-  - [x] install language servers
-    - [x] rnix
-    - [x] terraformls
-    - [x] sumneko_lua
-    - [x] yamlls
-    - [x] ?check if there are performance differences on language servers on_attach compared with Packer
-  - [x] solve telescope functions load
-    - [ ] format mappings calls using functions and loops
+    - this is probably too cumbersome
+        - making this flake was a good practice and will be useful to share with others
+        - but in the day to day usage will bring problems
+        - so i'll better manage nvim in nixos through home-manager
+- [ ] format mappings calls using functions and loops
   - [ ] manage plugins and LS with flakes so we can pin the versions
-!- [ ] add all the configuration files
-  - [x] colorscheme
-  - [x] colorizer
-  - [x] lualine
-  - [ ] fix lsp not getting cmp_lsp settings
-  - [x] pass plugin/plugins.vim to lua
-  - [ ] symlink to .config so we can test changes quickly
-      - this will force to maintain a certain lua structure with init.lua on root
-      - order files
-    - ?may have to move cmp_lsp to lsp file
-  - [ ] ?function to read recursively all the config files
-- [ ] structure README's,
-  - one for each package and one for the main project
-- [x] track our built package on the system wide configuration of nixos
-  - [x] do it through flakes
-      - ?how to reference a flake in a subdirectory
-      - would be ideal to move back the programas to home/dotfiles, and then create another repository that would call every one of those programs through flakes.
-
-- [x] add a buildImage
-    - [ ] fix telescope missing dependencies
-- [x] ?add a nix shell to test
+- [ ] fix lsp not getting cmp_lsp settings
+- [ ] ?function to read recursively all the config files
+- [ ] fix telescope missing dependencies
 - [ ] ?how to manage snippets
-- [x] ?where to get the full list of arguments that the pkgs.vimPlugins provides
 
 ## Resources
 

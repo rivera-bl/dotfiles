@@ -161,7 +161,10 @@
     enableZshIntegration = true;
 
     settings = {
-      # format = "$nix_shell$all";
+      format = "
+[┌───────────────────>](bold green)
+[│](bold white) $nix_shell$directory
+[└─>](bold green) ";
       right_format = "$cmd_duration";
       add_newline = false;
       line_break = { disabled = true; };
@@ -182,7 +185,7 @@
 
       hostname = {
         style = "fg:62";
-        ssh_only = false;
+        ssh_only = true;
         format = "[$ssh_symbol](bold blue)[@]($style)[$hostname]($style)[:]($style) ";
         trim_at = ".companyname.com";
       };

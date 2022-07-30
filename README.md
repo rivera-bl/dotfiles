@@ -133,9 +133,10 @@ man home-configuration.nix
     - [x] manage the aliases with .zalias
     - [ ] replace lazygit/add new tool for diff
         - needs full vertical side by side cherrypicking
-    - [ ] zsh add --> twisting line to prompt
+    - [x] zsh add --> twisting line to prompt
         - check starship docs
         - check newm video
+    - [ ] get colored output from kubectl,docker and ls
     - [ ] install fzf plugins
         - [ ] tmuxinator
     - [ ] zsh copy-paste between zsh and vim

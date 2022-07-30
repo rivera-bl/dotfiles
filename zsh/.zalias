@@ -1,5 +1,5 @@
-#!/bin/zsh
-#Run 'alias' for the full list
+# #!/bin/zsh
+# Run 'alias' for the full list
 
 #DIRS
 alias cbi="cd $HOME/.local/bin"

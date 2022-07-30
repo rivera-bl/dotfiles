@@ -132,23 +132,38 @@ man home-configuration.nix
           - accept CTRL-SPACE
     - [x] manage the aliases with .zalias
     - [x] change configuration.nix to get flake from dir
+    - [x] zsh copy-paste between zsh and vim
+    - [x] zsh syntax highlighting plugin
+    - [ ] install fzf plugins
+        - [x] tmuxinator
+        - [ ] fzf-sessions
+    - [ ] package awscli
+        - for now run as a container
+    - [ ] build wsl
+
+    - [ ] tmux add kubectl context
+    - [ ] kubectl_fzf customize interface
+
+    - [ ] zsh install kubecolor
+        - gotta package it with nix
     - [ ] zsh manage scripts and source by folders
+        - use readDir function
         - [ ] functions
         - [ ] alias
-        - [ ] .sh .z* or extensionless?
-    - [ ] zsh copy-paste between zsh and vim
-    - [ ] zsh remove greeting from
-    - [ ] zsh syntax highlighting
-        - get colored output from kubectl,docker and ls
+    - [ ] zsh fix too slow at startup
+    - [ ] zsh split alias and abbr files
+    - [ ] zsh better highlight for --flags
+    - [ ] install zsh system-wide
+    - [ ] workflow to update abbr in one command, separate from alias
 
+    - [ ] fzf change find for ag or rg
+    - [ ] source abbr only once like with hm-session-vars.sh
     - [ ] configure lazygit
         - colors from colors.nix
         - [ ] remove command log
         - [ ] more space to cherry pick windows
           - [ ] or add new tool for diff
             - full vertical side by side cherrypicking
-    - [ ] install fzf plugins
-        - [ ] tmuxinator
     - [ ] configure less
         - [ ] mouse scrolling
     - [ ] alias for kubectl actions: kd,kg,kx
@@ -212,3 +227,4 @@ man home-configuration.nix
 [17]: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 [18]: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.m
 [19]: https://medium.com/@rajsek/zsh-bash-startup-files-loading-order-bashrc-zshrc-etc-e30045652f2e 
+[20]: https://github.com/hidetatz/kubecolor#zsh

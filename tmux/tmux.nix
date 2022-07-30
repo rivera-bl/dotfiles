@@ -2,6 +2,7 @@
 
   programs.tmux = {
     enable = true;
+    tmuxinator.enable = true;
     plugins = with pkgs; [
       tmuxPlugins.resurrect
       tmuxPlugins.vim-tmux-navigator

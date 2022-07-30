@@ -11,8 +11,6 @@
     enableSyntaxHighlighting = true;
 
     dirHashes = {
-      hom = "$HOME/nixos/home/";
-      xom = "$HOME/nixos/system/";
     };
 
     history = {
@@ -39,7 +37,9 @@
       zmodload zsh/complist
       _comp_options+=(globdots)		# Include hidden files.
 
-      source <(kubectl completion zsh) 
+      source <(kubectl completion zsh)
+      # https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh
+      source ~/nixos/home/zsh/_tmuxinator
       ";
 
     # TODO: split .zshrc here

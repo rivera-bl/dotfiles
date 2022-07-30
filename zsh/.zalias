@@ -6,6 +6,9 @@ alias cbi="cd $HOME/.local/bin"
 alias cnf="cd $HOME/.config"
 alias cst="cd $HOME/.config/st"
 
+# Nix
+alias nrs="sudo nixos-rebuild switch --flake ~/nixos/system/#";
+alias nrh="home-manager switch --flake ~/nixos/home/#nixos";
 
 #COMMANDS
 #MAIN

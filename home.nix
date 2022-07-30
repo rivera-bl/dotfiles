@@ -382,8 +382,9 @@
     initExtra = "
       ${builtins.readFile ./zsh/.zalias}
       ${builtins.readFile ./zsh/.zfunctions}
-      bindkey '\\0' forward-char # accept-autosuggestion
       zplug load
+      # overwritten by zsh-abbr
+      bindkey '\\0' forward-char # accept-autosuggestion
     ";
 
     # .zlogin
@@ -399,10 +400,11 @@
     shellGlobalAliases = {};
 
     zplug = {
-      /* zplugHome = ~/.config/zsh/.zplug; */
+      zplugHome = ~/.config/zsh/.zplug;
       enable = true;
       plugins = [
         { name = "bonnefoa/kubectl-fzf"; tags = [ defer:3 ]; }
+        { name = "olets/zsh-abbr"; }
       ];
     };
 

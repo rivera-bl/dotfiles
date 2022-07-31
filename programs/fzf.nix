@@ -27,7 +27,9 @@
     # useful for when managing multiple sessions/windows
     tmux = {
       enableShellIntegration = true;
-      shellIntegrationOptions = [];
+      shellIntegrationOptions = [
+      "-p -w 62% -h 38% -m"
+      ];
     };
   };
 

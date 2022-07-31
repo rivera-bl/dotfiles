@@ -134,12 +134,12 @@ man home-configuration.nix
     - [x] change configuration.nix to get flake from dir
     - [x] zsh copy-paste between zsh and vim
     - [x] zsh syntax highlighting plugin
-    - [ ] install fzf plugins
+    - [x] install fzf plugins
         - [x] tmuxinator
-        - [ ] fzf-sessions
+        - [x] fzf-sessions
+    - [ ] build wsl
     - [ ] package awscli
         - for now run as a container
-    - [ ] build wsl
 
     - [ ] tmux add kubectl context
     - [ ] kubectl_fzf customize interface

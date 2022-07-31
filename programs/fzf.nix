@@ -18,7 +18,7 @@
     changeDirWidgetCommand = ""; # ALT-C
     changeDirWidgetOptions = [];
 
-    fileWidgetCommand = ""; # CTRL-T
+    fileWidgetCommand = "find -L"; # CTRL-T
     fileWidgetOptions = [];
 
     historyWidgetOptions = []; # CTRL-R
@@ -26,7 +26,7 @@
     # requires fzf-tmux plugins
     # useful for when managing multiple sessions/windows
     tmux = {
-      enableShellIntegration = false;
+      enableShellIntegration = true;
       shellIntegrationOptions = [];
     };
   };

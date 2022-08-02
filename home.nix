@@ -9,6 +9,7 @@
     ./programs/starship.nix
     ./programs/alacritty.nix
     ./programs/fzf.nix
+    ./programs/firefox.nix
   ];
 
   programs.home-manager.enable = true;

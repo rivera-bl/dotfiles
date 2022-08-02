@@ -137,15 +137,38 @@ man home-configuration.nix
     - [x] install fzf plugins
         - [x] tmuxinator
         - [x] fzf-sessions
+    - [x] overlay of kubectl-21
     - [ ] build wsl
     - [ ] package awscli
         - for now run as a container
 
-    - [ ] tmux add kubectl context
+    - [ ] read manpages inside of vim
+    - [ ] X11 forwarding
+    - [x] install buku fzf
+        - [ ] arreglar que hasta ahora no hace nada cuando presionamos enter
+            - deberia abrir la ventana en el navegador
+            - mapfile error
+        - [ ] encrypt buku bookmarks
+        - [ ] link bookmarks.db file to home for vcs
+    - [ ] import bookmarks based on tags to .md format
+      - [ ] use buku
+      - [ ] correlate one discovery session, to:
+          - discovery webpages around a them, ex. derivations
+          - bookmark on the browser and properly tag
+          - create a starting note.md
+          - use a vim command to invoke a scripts that parses to .md format
+      - so i save the pages and use one command after the discovery to write them all
+      - wont waste concentration moving one place to the other
+    - [ ] cmd to create a .md inside draft folder of blog asap
+    - [x] install firefox
+    - [ ] bind to move firefox to the current workspace for when in discovery
+    - [ ] tmux add kubectl context to bar
     - [ ] kubectl_fzf customize interface
-
-    - [ ] zsh install kubecolor
+    - [ ] kubecolor
         - gotta package it with nix
+    - [ ] ls -al improved coloring
+    - [ ] customize promt to use twisted line in 2 not 3
+
     - [ ] zsh manage scripts and source by folders
         - use readDir function
         - [ ] functions

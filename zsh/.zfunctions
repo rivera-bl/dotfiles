@@ -1,5 +1,17 @@
 # #!/bin/zsh
 
+function fb() {
+    # fzf with multi-selection, format to column and save to array
+    website=("${(@f)$(buku -p -f 5 | column -ts$'\t' | fzf --multi)}")
+
+    # open each website
+    for i in "${website[@]}"; do
+        index="$(echo "$i" | awk '{print $1}')"
+        buku -p "$index"
+        buku -o "$index"
+    done
+}
+
 # Select a docker container to start and attach to
 function da() {
   local cid

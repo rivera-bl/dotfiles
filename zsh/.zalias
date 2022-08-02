@@ -60,6 +60,7 @@ alias vgd="vagrant destroy"
 
 # TMUX
 alias t="tmux"
+alias tm="tmuxinator"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"

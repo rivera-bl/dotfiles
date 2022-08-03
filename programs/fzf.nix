@@ -23,14 +23,13 @@
 
     historyWidgetOptions = []; # CTRL-R
 
-    # requires fzf-tmux plugins
-    # useful for when managing multiple sessions/windows
-    tmux = {
-      enableShellIntegration = true;
-      shellIntegrationOptions = [
-      "-p -w 62% -h 38% -m"
-      ];
-    };
+    # requires fzf-tmux plugin
+    /* tmux = { */
+    /*   enableShellIntegration = true; */
+    /*   shellIntegrationOptions = [ */
+    /*   "-p -w 62% -h 38% -m" */
+    /*   ]; */
+    /* }; */
   };
 
 }

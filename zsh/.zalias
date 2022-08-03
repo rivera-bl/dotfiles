@@ -19,7 +19,8 @@ alias nrh="home-manager switch --flake ~/nixos/home/#nixos";
 #MAIN
 alias mki="sudo make clean install"
 alias ki="sudo killall"
-alias ls="ls --color"               #For gettin color output everytime we ls
+# alias ls="ls --color"               #For gettin color output everytime we ls
+alias ls="exa"               #For gettin color output everytime we ls
 alias ll="ls -al --color"
 alias grep="grep --color"
 alias vi="nvim"

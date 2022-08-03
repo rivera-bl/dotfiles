@@ -86,10 +86,10 @@ man home-configuration.nix
     - fish -M default clipboard
     - X xsel xclip
     - [ ] find a solution to copy through ssh
-- [ ] move every program to their own file
+- [x] move every program to their own file
 - [x] fix X copy/paste not working, like if X wasn't running, but systemctl status display-manager.service says it is indeed running, this happens when starting X automatically with the display-manager of lightdm
   - check for options via `man configuration.nix`
-!- [ ] install a font to render glyphs
+- [x] install a font to render glyphs
 - [ ] show notifications when long running commands finish
 - [x] fix keys:
     - [x] change layout to be able to use < >
@@ -100,7 +100,7 @@ man home-configuration.nix
         - or i could go back to the latam layout and use this FN to compose < >, but it would be on a very awkward spot
 !- [ ] configure colorscheme system-wide with nix-colors
     - i3, alacritty, startship, fish, neovim
-- [ ] change docker for podman
+- [x] change docker for podman
  - [ ] install every home program, the goal is to migrate every program I currently use so it is available in case I ever want to go back
     - [ ] neovim
         - for now install as a flake
@@ -138,14 +138,14 @@ man home-configuration.nix
         - [x] tmuxinator
         - [x] fzf-sessions
     - [x] overlay of kubectl-21
-    - [ ] build wsl
-    - [ ] package awscli
+!    - [ ] build wsl
+!    - [ ] package awscli
         - for now run as a container
 
     - [ ] read manpages inside of vim
     - [ ] X11 forwarding
     - [x] install buku fzf
-        - [ ] arreglar que hasta ahora no hace nada cuando presionamos enter
+        - [x] arreglar que hasta ahora no hace nada cuando presionamos enter
             - deberia abrir la ventana en el navegador
             - mapfile error
         - [ ] encrypt buku bookmarks
@@ -162,15 +162,16 @@ man home-configuration.nix
     - [ ] cmd to create a .md inside draft folder of blog asap
     - [x] install firefox
     - [ ] bind to move firefox to the current workspace for when in discovery
-    - [ ] tmux add kubectl context to bar
-    - [ ] kubectl_fzf customize interface
-    - [ ] kubecolor
-        - gotta package it with nix
-    - [ ] ls -al improved coloring
+    - [x] tmux add kubectl context to bar
+        - doesnt work on tmux on nixos
+!    - [ ] kubectl_fzf customize interface
+!    - [ ] fix fzf ctrl-r freezing on tmux
+    - [x] install kubecolor
+    - [x] install exa
     - [ ] customize promt to use twisted line in 2 not 3
 
     - [ ] zsh manage scripts and source by folders
-        - use readDir function
+!        - use readDir function
         - [ ] functions
         - [ ] alias
     - [ ] zsh fix too slow at startup

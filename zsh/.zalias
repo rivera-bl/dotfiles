@@ -11,9 +11,9 @@ alias nrs="sudo nixos-rebuild switch --flake ~/nixos/system/#";
 alias nrh="home-manager switch --flake ~/nixos/home/#nixos";
 
 # K8
-alias k="kubectl";
-alias kg="kubectl get";
-alias kx="kubectl exec -ti";
+# alias k="kubecolor";
+# alias kg="kubecolor get";
+# alias kx="kubecolor exec -ti";
 
 #COMMANDS
 #MAIN

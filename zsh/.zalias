@@ -42,9 +42,8 @@ alias glg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold b
 # alias ga="git add"
 
 #DOCKER
-alias dk="docker"
-alias dke="docker exec -it"
-alias dkc="docker-compose"
+alias dk="podman"
+alias dke="podman exec -it"
 
 #TERRAFORM
 alias tf="terraform"

@@ -3,13 +3,14 @@
 {
   imports = [
     ./i3/i3.nix
-    ./tmux/tmux.nix
     ./lazygit/lazygit.nix
+    ./tmux/tmux.nix
     ./zsh/zsh.nix
-    ./programs/starship.nix
     ./programs/alacritty.nix
+    ./programs/git.nix
     ./programs/fzf.nix
     ./programs/firefox.nix
+    ./programs/starship.nix
   ];
 
   programs.home-manager.enable = true;

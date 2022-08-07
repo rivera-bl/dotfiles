@@ -1,5 +1,6 @@
 ## Home programs
 
+
 ### Discovery
 
 #### home-manager
@@ -75,6 +76,27 @@ man home-configuration.nix
 
 ## TODO
 
+
+- [x] package awscli
+- [ ] build wsl
+    - [x] on its own branch
+      - lazygit stash and checkout 
+    - [x] write powershell script
+    - [ ] test on cenco
+- [ ] create configuration.nix for wim host
+    - find a name
+- [ ] traverse notes by making git repo private and download on navi
+- [ ] import bookmarks based on tags to .md format
+  - [ ] use buku
+  - [ ] group one discovery session, to:
+      - discovery webpages around a them, ex. derivations
+      - bookmark on the browser and properly tag
+      - create a starting note.md
+      - use a vim command to invoke a scripts that parses to .md format
+  - so i save the pages and use one command after the discovery to write them all
+  - wont waste concentration moving one place to the other
+- [ ] customize promt to use twisted line in 2 not 3
+
 - [x] test home-manager with nix-shell
     - [x] decide wheter `rebuild` is fast enough for experimentation, if not should use mkOutOfStoreSymlink
     - wasn't so bad so will build the programs with their config files
@@ -138,8 +160,8 @@ man home-configuration.nix
         - [x] tmuxinator
         - [x] fzf-sessions
     - [x] overlay of kubectl-21
-!    - [ ] build wsl
-!    - [ ] package awscli
+    - [x] build wsl
+    - [x] package awscli
         - for now run as a container
 
     - [ ] read manpages inside of vim
@@ -152,7 +174,7 @@ man home-configuration.nix
         - [ ] link bookmarks.db file to home for vcs
     - [ ] import bookmarks based on tags to .md format
       - [ ] use buku
-      - [ ] correlate one discovery session, to:
+      - [ ] group one discovery session, to:
           - discovery webpages around a them, ex. derivations
           - bookmark on the browser and properly tag
           - create a starting note.md
@@ -160,12 +182,13 @@ man home-configuration.nix
       - so i save the pages and use one command after the discovery to write them all
       - wont waste concentration moving one place to the other
     - [ ] cmd to create a .md inside draft folder of blog asap
+        - with the tag of the path it was created from
     - [x] install firefox
     - [ ] bind to move firefox to the current workspace for when in discovery
     - [x] tmux add kubectl context to bar
         - doesnt work on tmux on nixos
 !    - [ ] kubectl_fzf customize interface
-!    - [ ] fix fzf ctrl-r freezing on tmux
+    - [x] fix fzf ctrl-r freezing on tmux
     - [x] install kubecolor
     - [x] install exa
     - [ ] customize promt to use twisted line in 2 not 3
@@ -204,6 +227,12 @@ man home-configuration.nix
         - [x] configure
         - [ ] improve tmux integration
             - why the cursor blinks in alacritty but not inside of tmux?
+!    - [ ] configure git in home-manager
+!    - [ ] move neovim to home-manager
+!    - [ ] move tmux.conf to tmux.nix
+!    - [ ] move i3.conf to i3.nix
+!    - [ ] configure colorscheme system-wide with nix-colors
+
 !    - [x] i3
         - [x] solve .xinitrc
         - [ ] move i3config to nix
@@ -214,23 +243,23 @@ man home-configuration.nix
         - [ ] find a way to select and execute command with one key
             - most of the cool functions are already written in bash
             - execute a bash script within a fish function with `bash -c ''`
-    - [ ] mpd
-    - [ ] ncmpcpp
-    - [ ] zathura
-    - [ ] zeal
-    - [ ] lazygit
+!    - [ ] mpd
+!    - [ ] ncmpcpp
+!    - [ ] zathura
+!    - [ ] zeal
+    - [x] lazygit
       - [ ] configure mappings
-    - [ ] zsh
+    - [x] zsh
 - [ ] test out alacritty multiplexing mode
     - i don't think it will be better than tmux
 - [ ] install rust tools that improve cli workflow
 - [ ] eventually I would like to create a nixos-module and a flake with my console-drive development environment
-    - this would be composed of `fzf` `shell` `tmux` `starship` `?font`
-      - the shell for now will be `fish`
+    - this would be composed of `fzf` `zsh` `tmux` `starship` `?font`
       - `nvim` will not be included because it is a very opiniated tool
       - the terminal either because it offers little functionality for this use
           - a terminal like `alacritty` can't be run on a non-graphical environment
           - the user who would try this module/flake will have it's own terminal
+          - could be useful to use for kubectl debug
 
 [1]: https://github.com/Mic92/dotfiles/tree/master/nixos
 [2]: https://nix-community.github.io/home-manager/index.html#sec-flakes-nixos-module 

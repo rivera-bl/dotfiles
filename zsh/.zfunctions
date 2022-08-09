@@ -1,5 +1,32 @@
 # #!/bin/zsh
 
+# Send keys to multiple tmux panes when zsh|bash not running any process
+# TODO bind to tmux key, tmux send-keys "tmux_set_venv"
+# TODO accept input
+function _send_bash_command_to_session() {
+    if [[ $# -eq 0 || "$1" = "--help" ]] ; then
+        echo 'Usage: _send_bash_command_to_session $session_name what ever command you want: '
+        return
+    fi
+    input_session="$1"
+    input_command="${@:2}"
+    # trimmed_command=$(echo -n "$input_command" | tr '\n' ' ') # not necessary if "$command"
+    for _pane in $(tmux list-panes -s -t ${input_session} -F '#{window_index}.#{pane_index}'); do
+        # only apply the command in bash or zsh panes.
+        _current_command=$(tmux display-message -p -t ${input_session}:${_pane} '#{pane_current_command}')
+        if [ ${_current_command} = zsh ] || [ ${_current_command} = bash ] ; then
+            tmux send-keys -t ${_pane} "$input_command" Enter
+        fi
+
+    done
+}
+
+tmux_set_env() {
+    _current_session=$(tmux display-message -p '#{session_name}')
+    _send_bash_command_to_session ${_current_session} $@ # if multi-line wrap in ""
+}
+
+# Select buku bookmarks and open in browser
 function fb() {
     # fzf with multi-selection, format to column and save to array
     website=("${(@f)$(buku -p -f 5 | column -ts$'\t' | fzf --multi)}")

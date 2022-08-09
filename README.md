@@ -228,6 +228,9 @@ man home-configuration.nix
         - [ ] improve tmux integration
             - why the cursor blinks in alacritty but not inside of tmux?
 !    - [ ] configure git in home-manager
+        - install
+        - manage key with sops
+        - pull on wsl
 !    - [ ] move neovim to home-manager
 !    - [ ] move tmux.conf to tmux.nix
 !    - [ ] move i3.conf to i3.nix
